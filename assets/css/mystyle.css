@@ -1,0 +1,82 @@
+.fa-check {
+      color: #00FCA1;
+}
+
+.colored {
+      color: #00FCA1;
+}
+
+.colored-link {
+      color: #00FCA1;
+      cursor: pointer;
+}
+
+.tier-option {
+      cursor: pointer;
+      padding: 8px;
+      border: 2px solid #00FCA100;
+      margin: 8px;
+}
+
+.tier-active {
+      border: 2px solid #00FCA1;
+      background-color: #00FCA144;
+      box-sizing: border-box;
+}
+
+.input-number-2 {
+      background-color: #e9fdf6;
+      border: #00FCA1 3px solid;
+      border-radius: 2px;
+      margin: 4px;
+}
+
+.yel {
+      color: #FFE600;
+}
+
+.orgo {
+      color: #ff9900;
+}
+
+.ger {
+      color: greenyellow;
+}
+
+.mycar li {
+      white-space: nowrap;
+      /* width: 500px; */
+      /* overflow-x: hidden; */
+}
+
+
+
+
+
+
+.refresh-spin {
+
+
+      -webkit-animation-name: spin;
+      -webkit-animation-duration: 4000ms;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-name: spin;
+      -moz-animation-duration: 4000ms;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: linear;
+      -ms-animation-name: spin;
+      -ms-animation-duration: 4000ms;
+      -ms-animation-iteration-count: infinite;
+      -ms-animation-timing-function: linear;
+}
+
+@-webkit-keyframes spin {
+      from {
+            -webkit-transform: rotate(0deg);
+      }
+
+      to {
+            -webkit-transform: rotate(360deg);
+      }
+}

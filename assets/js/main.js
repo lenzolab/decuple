@@ -92,6 +92,7 @@
                     if (!min || value >= min) {
                         el[0].value = value;
                     }
+                    setTotalPrice()
                 }
 
                 function increment() {
@@ -100,6 +101,7 @@
                     if (!max || value <= max) {
                         el[0].value = value++;
                     }
+                    setTotalPrice()
                 }
             }
         }
@@ -246,6 +248,13 @@ function openContent(evt, cityName) {
     }
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
+
+
+    // CUSTOM AADED
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
 }
 
 // Get the element with id="defaultOpen" and click on it
@@ -307,22 +316,22 @@ function showMintSlides() {
 
 //index5 page roadmap slider
 $('.owl-carousel.roadmap-slider').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
-    autoplay:true,
-    autoplayTimeout:3000,
-    autoplayHoverPause:true,
-    responsive:{
-        0:{
-            items:1
+    loop: true,
+    margin: 10,
+    nav: true,
+    navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    responsive: {
+        0: {
+            items: 1
         },
-        768:{
-            items:2
+        768: {
+            items: 2
         },
-        992:{
-            items:3
+        992: {
+            items: 3
         }
     }
 });
