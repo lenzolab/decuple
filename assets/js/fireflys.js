@@ -5,6 +5,8 @@ let c = init("canvas"),
     h = (canvas.height = window.innerHeight);
 //initiation
 
+// The randomness must be improved.
+// Abundance should lean toward the center.
 class firefly {
     constructor() {
         this.x = Math.random() * w;
