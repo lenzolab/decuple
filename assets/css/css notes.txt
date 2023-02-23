@@ -1,0 +1,3 @@
+
+The main css file needed to be divided into two new files.
+Desktop classes and phone classes needed to be separated.
