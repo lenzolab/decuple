@@ -1,0 +1,40 @@
+<div class="connect_modal">
+        <div class="modal fade " id="connectModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal_overlay">
+                        <div class="modal_header">
+                            <h2>Connect Wallet</h2>
+                            <button data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                        <div class="modal_body text-center">
+                            <p>Please select a wallet to connect for start Minting your NFTs</p>
+                            <div class="connect-section">
+                                <ul class="heading-list">
+                                    <li><a href="#" class="connect-meta"><span><img
+                                                    src="assets/images/icon/MetaMask.svg"
+                                                    alt="Meta-mask-Image"></span>MetaMask</a></li>
+                                    <li><a href="#"><span><img src="assets/images/icon/Formatic.svg"
+                                                    alt="Coinbase-Image"></span>Coinbase</a></li>
+                                    <li><a href="#"><span><img src="assets/images/icon/Trust_Wallet.svg"
+                                                    alt="Trust-Image"></span>Trust Wallet</a></li>
+                                    <li><a href="#"><span><img src="assets/images/icon/WalletConnect.svg"
+                                                    alt="Wallet-Image"></span>WalletConnect</a></li>
+                                </ul>
+                            </div>
+                            <h6>By connecting your wallet, you agree to our <a href="#">Terms of Service</a> and our <a
+                                    href="#">Privacy Policy</a>.</h6>
+                        </div>
+                        <div class="modal_bottom_shape">
+                            <span class="modal_bottom_shape_left"><img src="assets/images/icon/hov_shape_L.svg"
+                                    alt="" /></span>
+                            <span class="modal_bottom_shape_right"><img src="assets/images/icon/hov_shape_L.svg"
+                                    alt="" /></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

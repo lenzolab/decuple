@@ -1,0 +1,157 @@
+.fa-check {
+      color: #00FCA1;
+}
+
+.colored {
+      color: #00FCA1;
+}
+
+.colored-link {
+      color: #00FCA1;
+      cursor: pointer;
+}
+
+.tier-option {
+      cursor: pointer;
+      padding: 8px;
+      border: 2px solid #00FCA100;
+      margin: 8px;
+}
+
+.tier-active {
+      border: 2px solid #00FCA1;
+      background-color: #00FCA144;
+      box-sizing: border-box;
+}
+
+.input-number-2 {
+      background-color: #e9fdf6;
+      border: #00FCA1 3px solid;
+      border-radius: 2px;
+      margin: 4px;
+}
+
+.yel {
+      color: #FFE600;
+}
+
+.orgo {
+      color: #ff9900;
+}
+
+.ger {
+      color: greenyellow;
+}
+
+.mycar li {
+      white-space: nowrap;
+      /* width: 500px; */
+      /* overflow-x: hidden; */
+}
+
+
+
+.why {
+      /* margin-left: 40px; */
+      text-decoration: underline;
+      font-weight: 500;
+      font-size: 1.25rem;
+      color: rgb(234, 250, 245);
+      text-transform: uppercase;
+      font-family: 'Bakbak One';
+      letter-spacing: 1px;
+
+}
+
+.why:hover {
+      /* margin-left: 45px; */
+      /* background-position: left; */
+      text-decoration: underline;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 1.25rem;
+      color: rgb(248, 253, 252);
+      text-shadow: #c4d6d0 1px 1px 3px;
+      text-transform: uppercase;
+      font-family: 'Bakbak One'
+}
+
+.why-frame {
+      cursor: pointer;
+      padding: 10px 20px;
+      margin-left: 45px;
+      background: rgba(0, 0, 0, 0);
+      /* default color */
+
+      /* "to left" / "to right" - affects initial color */
+      background: linear-gradient(to left, rgba(255, 255, 255, 0.1) 50%, rgba(227, 246, 252, 0.23) 50%) right;
+      background-size: 200%;
+      transition: .4s ease-out;
+}
+
+.why-frame:hover {
+      background-position: left;
+}
+
+
+.only-phone {
+      display: none;
+}
+
+.img-low-opacity {
+      opacity: 0.5;
+}
+
+.row-custom-0 {
+      display: flex;
+      flex-wrap: nowrap;
+}
+
+.why-title {
+      font-weight: 500;
+      font-size: 1rem;
+      color: rgb(248, 253, 252);
+      text-transform: uppercase;
+      font-family: 'Bakbak One';
+      width: unset !important;
+}
+
+.why-desc {
+      width: unset !important;
+      /* font-family: 'Bakbak One'; */
+      font-weight: 300;
+      font-size: 0.75rem;
+      color: rgb(248, 253, 252);
+}
+
+.why-icon {
+      min-width: 45px !important;
+      margin-top: 1vh;
+}
+
+.refresh-spin {
+
+
+      -webkit-animation-name: spin;
+      -webkit-animation-duration: 4000ms;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-name: spin;
+      -moz-animation-duration: 4000ms;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: linear;
+      -ms-animation-name: spin;
+      -ms-animation-duration: 4000ms;
+      -ms-animation-iteration-count: infinite;
+      -ms-animation-timing-function: linear;
+}
+
+@-webkit-keyframes spin {
+      from {
+            -webkit-transform: rotate(0deg);
+      }
+
+      to {
+            -webkit-transform: rotate(360deg);
+      }
+}
