@@ -5854,7 +5854,8 @@ V5 - Home
     align-content: center;
     justify-content: center;
     z-index: 10;
-    background: url(../images/bg/v5-baner1.jpg);
+    /* background: url(../images/bg/v5-baner1.jpg); The original background */
+    background: url(../images/bg/Pbg.svg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

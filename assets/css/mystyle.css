@@ -155,3 +155,37 @@
             -webkit-transform: rotate(360deg);
       }
 }
+
+
+#w {
+      max-width: 100%;
+}
+
+#w model-viewer {
+      height: 400px;
+      width: 400px;
+      /* position: absolute; */
+      top: 0;
+      left: 0;
+      border: none;
+}
+
+
+
+
+@media only screen and (max-width: 576px) {
+      #w model-viewer {
+            height: 90vw;
+            width: 90vw;
+            /* position: absolute; */
+            top: 0;
+            left: 0;
+            border: none;
+      }
+
+      .marketing-content-subframe {
+            padding: 16px 0px 16px 32px !important;
+            color: #f0f0f0;
+            font-size: 1.1rem;
+      }
+}
