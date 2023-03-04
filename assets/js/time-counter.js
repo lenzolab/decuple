@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
     function makeTimer() {
-        var endTime = new Date("aug 15, 2022 02:15:13");
+        var endTime = new Date("apr 15, 2023 02:15:13");
         var endTime = (Date.parse(endTime)) / 1000;
         var now = new Date();
         var now = (Date.parse(now) / 1000);
@@ -22,7 +22,7 @@ $(document).ready(function () {
         if (seconds < "10") {
             seconds = "0" + seconds;
         }
-        $(".timer_1 .days").html(days + "<span>D</span>");
+        $(".timer_1 .days").html(' <span class=" yel">' + days + "<span> Days </span></span>");
         $(".timer_1 .hours").html(hours + "<span>H</span>");
         $(".timer_1 .minutes").html(minutes + "<span>M</span>");
         $(".timer_1 .seconds").html(seconds + "<span>S</span>");

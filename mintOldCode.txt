@@ -1,0 +1,125 @@
+<div class="home_tab_content" id="v5mint">
+                    <div class="v5-mint-content">
+                        <div class="container">
+                            <div class="v5-mint-inner">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="v5-mint-left">
+                                            <div class="v5-mint-left-img">
+                                                <div class="mintslideshow-container">
+                                                    <div class="myMintSlides">
+                                                        <img src="assets/images/nft/emoji-img4.png" alt="Emmoji"
+                                                            class="img-fluid" />
+                                                    </div>
+                                                    <div class="myMintSlides">
+                                                        <img src="assets/images/nft/emoji-img5.png" alt="Emmoji"
+                                                            class="img-fluid" />
+                                                    </div>
+                                                    <div class="myMintSlides">
+                                                        <img src="assets/images/nft/emoji-img6.png" alt="Emmoji"
+                                                            class="img-fluid" />
+                                                    </div>
+                                                    <div class="myMintSlides">
+                                                        <img src="assets/images/nft/emoji-img7.png" alt="Emmoji"
+                                                            class="img-fluid" />
+                                                    </div>
+                                                </div>
+                                                <div style="display: none">
+                                                    <span class="dott"></span>
+                                                    <span class="dott"></span>
+                                                    <span class="dott"></span>
+                                                    <span class="dott"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="v5-mint-right">
+                                            <div class="v5-mint-right-inner">
+                                                <div class="mint_count_list mt-0">
+                                                    <ul class="mt-10">
+                                                        <li style="height: 56px;">
+                                                            <span class="tier-option tier-active"
+                                                                id="tier-picker-common">
+                                                                <img src="assets/images/nft/alltierlabel/common.png"
+                                                                    alt="" id="common-img">
+                                                            </span>
+                                                            <span class="tier-option" id="tier-picker-rare">
+                                                                <img src="assets/images/nft/alltierlabel/rare-dis.svg"
+                                                                    alt="" id="rare-img">
+                                                            </span>
+                                                        </li>
+                                                        <li style="height: 56px;">
+
+                                                            <span class="tier-option" id="tier-picker-epic">
+                                                                <img src="assets/images/nft/alltierlabel/epic-dis.svg"
+                                                                    alt="" id="epic-img">
+                                                            </span>
+                                                            <span class="tier-option" id="tier-picker-leg">
+                                                                <img src="assets/images/nft/alltierlabel/leg-dis.svg"
+                                                                    alt="" id="leg-img">
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <h5>Price</h5>
+                                                            <h5> <span id="mint-price-0">500</span> USD</h5>
+                                                        </li>
+                                                        <li>
+                                                            <h5>Referral code</h5>
+                                                            <h5 style="width: 40%;">
+                                                                <!-- <h5> <span id="mint-price-0">2</span> BNB</h5> -->
+                                                                <input class="input-number-2" id="referralcode-0"
+                                                                    style="width: 100%;">
+                                                                <!-- <button class="input-number-increment">+</button> -->
+                                                            </h5>
+                                                            <h5>
+                                                                <img src="assets/images/icon/refresh.svg" alt=""
+                                                                    id="refresh-p" onclick="refreshReferral('p')">
+                                                            </h5>
+
+                                                            <h5>
+                                                                <a href="" target="_blank">
+                                                                    <img src="assets/images/icon/info2.svg" alt=""
+                                                                        id="the-info">
+                                                                </a>
+
+                                                            </h5>
+                                                        </li>
+                                                        <li>
+                                                            <h5>Quantity</h5>
+                                                            <div class="mint_quantity_sect">
+                                                                <button class="input-number-decrement">-</button>
+                                                                <input class="input-number" type="text" value="1"
+                                                                    min="1" max="5" id="input-number-selector">
+                                                                <button class="input-number-increment">+</button>
+                                                            </div>
+                                                            <h5><span id="total-price-0">500</span> USD</h5>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+
+
+
+
+                                                <button class="btn-mid-green w-100 hov_shape_show"
+                                                    data-bs-toggle="modal" data-bs-target="#mintModal">
+                                                    MINT NOW
+                                                    <span class="hov_shape1"><img
+                                                            src="assets/images/icon/hov_shape_L_dark.svg"
+                                                            alt="" /></span>
+                                                    <span class="hov_shape2"><img
+                                                            src="assets/images/icon/hov_shape_L_dark.svg"
+                                                            alt="" /></span>
+                                                    <span class="square_hov_shape"></span>
+                                                </button>
+                                                <p>By clicking “MINT”, You agree to our <a href="#">Terms of Service</a>
+                                                    and our <a href="#">Privacy Policy.</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>

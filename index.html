@@ -53,16 +53,66 @@ about the threat caused by landmines to the safety, health, and lives of civilia
             <div class="bithu_mint_header_left row">
                 <div class="logo row-custom-0">
                     <a href="index.html"><img src="assets/images/mint-logo.png" alt="logo" /></a>
-                    <!-- <div class="why-frame" data-bs-toggle="modal" data-bs-target="#connectModal">
-                        <span class="why hov_shape_show  ">
-                            Why
-                            <br class="only-phone .d-block .d-sm-none">
-                            <span class="yel">D</span>e<span class="yel">c</span>u<span class="yel">p</span>le ?</span>
 
-                    </div> -->
                 </div>
             </div>
             <div class="bithu_mint_header_right d-flex">
+
+                <div class="why-frame" id="Vidbg" title="Video Background">
+                    <span class="why hov_shape_show  ">
+                        Vid BG</span>
+
+                </div>
+                <div class="why-frame" id="nb" title="Next Background">
+                    <span class="why hov_shape_show  ">
+                        N B</span>
+
+                </div>
+                <div class="why-frame" id="vis" title="Object Visibility">
+                    <span class="why hov_shape_show  ">
+                        Vis</span>
+
+                </div>
+                <button class="connect_btn hov_shape_show" data-bs-toggle="modal" data-bs-target="#dashboard-Modal">
+                    <img src="assets/images/icon/connect_wallet.svg" alt="" />
+                    Wlt
+                    <span class="hov_shape1"><img src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                    <span class="hov_shape2"><img src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                    <span class="square_hov_shape"></span>
+                </button>
+
+
+                <script>
+                    document.getElementById('vis').addEventListener('click', () => {
+                        document.getElementById('w').innerHTML = `<model-viewer src="https://warriorsmaster.github.io/-DOBJTEST/21K-FINAL.glb" alt="VR Headset" auto-rotate
+                    camera-controls ar ios-src="https://warriorsmaster.github.io/-DOBJTEST/21K-FINAL.glb">
+                </model-viewer>`
+                        if (document.getElementById('w').style.visibility == "visible") {
+                            document.getElementById('w').style.visibility = "hidden"
+                        } else {
+                            document.getElementById('w').style.visibility = "visible"
+                        }
+                    })
+                    var bgNumX = 2;
+                    document.getElementById('nb').addEventListener('click', () => {
+                        //v5-home-content
+                        document.getElementById('pbg').style.background = "url(../assets/images/bg/Pbg" + bgNumX + ".svg)";
+                        bgNumX++;
+                    })
+                    var isVideo = false;
+                    document.getElementById('Vidbg').addEventListener('click', () => {
+                        if (!isVideo) {
+                            document.getElementById('video-bg').innerHTML = `<video autoplay muted loop id="myVideo">
+                            <source src="assets/images/bg/bgv.mp4" type="video/mp4">
+                        </video>`;
+                            document.querySelector('video').playbackRate = 0.4;
+                            isVideo = true
+                        } else {
+                            document.getElementById('video-bg').innerHTML = ""
+                            isVideo = false
+                        }
+                    })
+                </script>
 
                 <div class="why-frame" data-bs-toggle="modal" data-bs-target="#connectModal">
                     <span class="why hov_shape_show  ">
@@ -79,9 +129,18 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                         <span class="square_hov_shape"></span>
                     </button>
                 </div>
-
+                <button class="mint_menu_btn hov_shape_show nav-expander ml-30" id="mint_menu_btn">
+                    <span class="menu_icon"><img src="assets/images/icon/mint-menu_icon.svg" alt="icon" /></span>
+                    <span class="menux_icon"><img src="assets/images/icon/mint-menu_x_icon..svg" alt="icon" /></span>
+                    <span class="square_hov_shape"></span>
+                </button>
             </div>
-            <!-- <div class="mint_menu_section" id="mobile-navbar-menu">
+            <script>
+                document.getElementById('show-dashboard').addEventListener('click', () => {
+                    // Show dashboard model
+                })
+            </script>
+            <div class="mint_menu_section" id="mobile-navbar-menu">
                 <div class="mint_menu_left_bg"></div>
                 <div class="mint_menu_overlay"></div>
                 <div class="mint_menu_content">
@@ -92,9 +151,38 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                         <div class="mint_menu_inner">
                             <div class="mint_menu_left">
                                 <h2 class="uppercase">Menu</h2>
-                                <div class="mint_home_menu">
-                                    <h5 class="uppercase">Home pages</h5>
-                                    <ul>
+                                <div class="mint_home_menu hide-scrollbar">
+                                    <h5 class="uppercase">The story of DECUPLE</h5>
+                                    <p>The <span class="yel">DECUPLE</span> NFT collection is here to take your finances
+                                        into a whole new level.</p>
+                                    <br>
+                                    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                                        publishing industries for previewing layouts
+                                        and visual mockups.</p>
+                                    <br>
+                                    <div style="text-align: center;">
+                                        <img src="assets/images/btn/Golden-badge.png" alt="" title="Story image"
+                                            style="max-width: 60%;">
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <h5>DECUPLE empowers metaverse</h5>
+                                    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                                        publishing industries for previewing layouts
+                                        and visual mockups.</p>
+
+                                    <br>
+                                    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                                        publishing industries for previewing layouts
+                                        and visual mockups.</p>
+
+                                    <br>
+                                    <div style="text-align: center;">
+                                        <img src="assets/images/btn/Crystal2.png" alt="" title="Story image"
+                                            style="max-width: 100%;">
+                                    </div>
+                                    <br>
+                                    <!-- <ul>
                                         <li><a href="index.html"><img src="assets/images/nft/index1.png"
                                                     alt="img" /></a></li>
                                         <li><a href="index4.html"><img src="assets/images/nft/index4.png"
@@ -105,7 +193,7 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                     alt="img" /></a></li>
                                         <li><a href="index3.html"><img src="assets/images/nft/index3.png"
                                                     alt="img" /></a></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="mint_menu_right">
@@ -114,19 +202,17 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                         <h5 class="uppercase">Sub pages</h5>
                                         <div class="mint_right_menu_list1_content">
                                             <ul>
-                                                <li><a href="mint.html">Minting Page 1</a></li>
-                                                <li><a href="mint2.html">Minting Page 2</a></li>
-                                                <li><a href="comming-soon.html">Coming Soon</a></li>
-                                                <li><a href="blog.html">Blog Page</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
+                                                <li><a href="blog.html" target="_blank">DECUPLE Blog</a></li>
+                                                <li><a href="gallery.html" target="_blank">Gallery</a></li>
+                                                <li><a href="blog-details.html" target="_blank">Whitepaper</a></li>
                                             </ul>
-                                            <ul>
+                                            <!-- <ul>
                                                 <li><a href="aboutus.html">About Us</a></li>
                                                 <li><a href="roadmap.html">Roadmap</a></li>
                                                 <li><a href="collections.html">Collections</a></li>
                                                 <li><a href="faq.html">FAQs</a></li>
                                                 <li><a href="contact-us.html">Contact Us</a></li>
-                                            </ul>
+                                            </ul> -->
                                         </div>
                                     </div>
                                     <div class="mint_right_menu_list mint_right_menu_list2">
@@ -177,7 +263,7 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 
@@ -186,21 +272,45 @@ about the threat caused by landmines to the safety, health, and lives of civilia
         <div class="bithu-h5-slider">
             <div class="slideshow-container">
                 <div class="home_tab_content" id="v5Home">
-                    <div class="v5-home-content">
+
+                    <div class="v5-home-content" id="pbg">
+
+                        <div id="video-bg">
+                            <!-- <video autoplay muted loop id="myVideo">
+                                <source src="assets/images/bg/bgv.mp4" type="video/mp4">
+                            </video> -->
+                        </div>
+                        <!-- Uncomment the following part to see the video background -->
+
+
+                        <!-- <video autoplay muted loop id="myVideo">
+                            <source src="assets/images/bg/bgv.mp4" type="video/mp4">
+                        </video> -->
+                        <style>
+                            #myVideo {
+                                position: fixed;
+                                right: 0;
+                                bottom: 0;
+                                min-width: 100%;
+                                min-height: 100%;
+                            }
+                        </style>
                         <div class="container v5-home-container">
-                            <span class="v5-home-thunder-icon"><img src="assets/images/icon/v5-thunder-icon.svg"
+                            <!-- <span class="v5-home-thunder-icon"><img src="assets/images/icon/v5-thunder-icon.svg"
                                     alt="icon" class="img-fluid img-low-opacity" /></span>
                             <span class="v5-home-star-icon "><img src="assets/images/icon/v5-star-icon.svg" alt="icon"
                                     class="img-fluid img-low-opacity" /></span>
                             <span class="v5-home-coin-icon"><img src="assets/images/icon/v5-coin-icon.svg" alt="icon"
-                                    class="img-fluid img-low-opacity" /></span>
+                                    class="img-fluid img-low-opacity" /></span> -->
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="v5-home-content-left">
                                         <!--<h2 class="uppercase">Build & sell Your<br>Every pixel <span><img -->
-                                        <h2 class="uppercase">Mint & Takeoff using services. <span><img
+                                        <h2 class="uppercase">Mint & Takeoff using services. </h2>
+                                        <!-- <span><img
                                                     src="assets/images/icon/v5-hart-icon.svg" alt="icon"
-                                                    class="img-fluid img-low-opacity" /></span></h2>
+                                                    class="img-fluid img-low-opacity" /></span> -->
+
                                         <h3><span class="count">400</span> / 8555 Minted</h3>
                                         <div class="v5-home-baner-buttons">
                                             <button class="v5mint_btn btn-mid-green hov_shape_show mr-30"
@@ -250,10 +360,10 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                 <div class="col-lg-6">
                                     <div class="v5-home-content-right">
                                         <div id="w">
-                                            <model-viewer src="https://warriorsmaster.github.io/-DOBJTEST/FINAL.glB.glb"
+                                            <!-- <model-viewer src="https://warriorsmaster.github.io/-DOBJTEST/21K-FINAL.glb"
                                                 alt="VR Headset" auto-rotate camera-controls ar
-                                                ios-src="https://warriorsmaster.github.io/-DOBJTEST/FINAL.glB.glb">
-                                            </model-viewer>
+                                                ios-src="https://warriorsmaster.github.io/-DOBJTEST/21K-FINAL.glb">
+                                            </model-viewer> -->
                                         </div>
                                         <!-- <div class="v5-home-right-change-img">
                                             <div class="autoslideshow-container">
@@ -281,23 +391,22 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                             </div>
                         </div>
                     </div>
-                    <!-- 
-/*
-*   How to change the content of the following carousel:
-*
-*   1- First, make all the desired changes only in the div
-*       With id="ceourcel-part-one". 
-*   2- Delete the div with id="ceourcel-part-two".
-*   3- Duplicate the div With id="ceourcel-part-one". 
-*   4- Change the new div id to id="ceourcel-part-two".
-*
-*   NOTE: both div must be exactly similar, and only the id should be different.
-*/
- -->
 
-
-
+                    <!-- Bottom carousel -->
                     <div class="bithu_v4owl_carousel_sect v5-owl-carousel">
+                        <!-- 
+                        /* Line 330
+                        *   How to change the content of the following carousel:
+                        *
+                        *   1- First, make all the desired changes only in the div
+                        *       With id="ceourcel-part-one". 
+                        *   2- Delete the div with id="ceourcel-part-two".
+                        *   3- Duplicate the div With id="ceourcel-part-one". 
+                        *   4- Change the new div id to id="ceourcel-part-two".
+                        *
+                        *   NOTE: both div must be exactly similar, and only the id should be different.
+                        */
+                         -->
                         <div class="bithu_v4owl_carousel_content v5owl_carousel_content">
 
 
@@ -343,6 +452,7 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                         class="orgo">1000 DCP per referee.</span>
                                 </li>
                             </ul>
+
                             <!-- 
                             <ul class="mycar">
 
@@ -395,131 +505,165 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                         </div>
                     </div>
                 </div>
+                <style>
+                    .hide-scrollbar::-webkit-scrollbar {
+                        display: none;
+                    }
+                </style>
+
+
+
+
                 <div class="home_tab_content" id="v5mint">
                     <div class="v5-mint-content">
-                        <div class="container">
-                            <div class="v5-mint-inner">
+                        <div class="container hide-scrollbar" style="overflow-x: scroll; ">
+                            <div class="buthu_mint_body_content buthu_mint2_body_content" style="padding-top: unset;">
                                 <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="v5-mint-left">
-                                            <div class="v5-mint-left-img">
-                                                <div class="mintslideshow-container">
-                                                    <div class="myMintSlides">
-                                                        <img src="assets/images/nft/emoji-img4.png" alt="Emmoji"
-                                                            class="img-fluid" />
-                                                    </div>
-                                                    <div class="myMintSlides">
-                                                        <img src="assets/images/nft/emoji-img5.png" alt="Emmoji"
-                                                            class="img-fluid" />
-                                                    </div>
-                                                    <div class="myMintSlides">
-                                                        <img src="assets/images/nft/emoji-img6.png" alt="Emmoji"
-                                                            class="img-fluid" />
-                                                    </div>
-                                                    <div class="myMintSlides">
-                                                        <img src="assets/images/nft/emoji-img7.png" alt="Emmoji"
-                                                            class="img-fluid" />
-                                                    </div>
-                                                </div>
-                                                <div style="display: none">
-                                                    <span class="dott"></span>
-                                                    <span class="dott"></span>
-                                                    <span class="dott"></span>
-                                                    <span class="dott"></span>
+
+                                    <div class="col-md-4 thin-bottom">
+                                        <h4 class="uppercase">Public Mint Starts in</h4>
+                                    </div>
+                                    <div class="col-md-4 thin-bottom">
+                                        <h4 class="uppercase timer timer-1">
+                                            <span class="days"> <span class=" yel"> 24<span>Days</span></span>
+                                            </span>
+                                            <span class="hours">15<span>H</span></span>
+                                            <span class="minutes">44<span>M</span></span>
+                                            <span class="seconds">18<span>S</span></span>
+                                        </h4>
+                                    </div>
+                                    <!-- <div class="col-md-4 thin-bottom">
+                                        <div class="mint-2_timer mint2_text">
+                                            <div class="buthu_mint1_body_right_timer m-0">
+                                                <div class="timer timer_1">
+                                                    <ul>
+                                                        <li class="days"> <span class=" yel"> 24<span>Days</span></span>
+                                                        </li>
+                                                        <li class="hours">15<span>H</span></li>
+                                                        <li class="minutes">44<span>M</span></li>
+                                                        <li class="seconds">18<span>S</span></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div> -->
+
+
+                                    <!-- <div class="col-md-4">
+                                        <div class="mint2_text mint2_counter">
+                                            <h4 class="mb-10"><span class="count">4331</span> / 9999</h4>
+                                        </div>
+                                    </div> -->
+                                    <div class="col-md-4 thin-bottom">
+                                        <!-- <div class="mint2_text mint2_whitlst"> -->
+                                        <h4 class="mb-10">WHITELIST : SOLDOUT <span><img
+                                                    src="assets/images/icon/mint-right-text-icon.svg"
+                                                    alt="icon" /></span></h4>
+                                        <!-- </div> -->
                                     </div>
-                                    <div class="col-lg-6">
-                                        <div class="v5-mint-right">
-                                            <div class="v5-mint-right-inner">
-                                                <div class="mint_count_list mt-0">
-                                                    <ul class="mt-10">
-                                                        <li style="height: 56px;">
-                                                            <span class="tier-option tier-active"
-                                                                id="tier-picker-common">
-                                                                <img src="assets/images/nft/alltierlabel/common.png"
-                                                                    alt="" id="common-img">
-                                                            </span>
-                                                            <span class="tier-option" id="tier-picker-rare">
-                                                                <img src="assets/images/nft/alltierlabel/rare-dis.svg"
-                                                                    alt="" id="rare-img">
-                                                            </span>
-                                                        </li>
-                                                        <li style="height: 56px;">
-
-                                                            <span class="tier-option" id="tier-picker-epic">
-                                                                <img src="assets/images/nft/alltierlabel/epic-dis.svg"
-                                                                    alt="" id="epic-img">
-                                                            </span>
-                                                            <span class="tier-option" id="tier-picker-leg">
-                                                                <img src="assets/images/nft/alltierlabel/leg-dis.svg"
-                                                                    alt="" id="leg-img">
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <h5>Price</h5>
-                                                            <h5> <span id="mint-price-0">500</span> USD</h5>
-                                                        </li>
-                                                        <li>
-                                                            <h5>Referral code</h5>
-                                                            <h5 style="width: 40%;">
-                                                                <!-- <h5> <span id="mint-price-0">2</span> BNB</h5> -->
-                                                                <input class="input-number-2" id="referralcode-0"
-                                                                    style="width: 100%;">
-                                                                <!-- <button class="input-number-increment">+</button> -->
-                                                            </h5>
-                                                            <h5>
-                                                                <img src="assets/images/icon/refresh.svg" alt=""
-                                                                    id="refresh-p" onclick="refreshReferral('p')">
-                                                            </h5>
-
-                                                            <h5>
-                                                                <a href="" target="_blank">
-                                                                    <img src="assets/images/icon/info2.svg" alt=""
-                                                                        id="the-info">
-                                                                </a>
-
-                                                            </h5>
-                                                        </li>
-                                                        <li>
-                                                            <h5>Quantity</h5>
-                                                            <div class="mint_quantity_sect">
-                                                                <button class="input-number-decrement">-</button>
-                                                                <input class="input-number" type="text" value="1"
-                                                                    min="1" max="5" id="input-number-selector">
-                                                                <button class="input-number-increment">+</button>
-                                                            </div>
-                                                            <h5><span id="total-price-0">500</span> USD</h5>
-                                                        </li>
-
-                                                    </ul>
+                                </div>
+                                <style>
+                                    .thin-bottom {
+                                        margin-bottom: 0px;
+                                        padding-bottom: 0px;
+                                    }
+                                </style>
+                                <div class="mint_card_sect mt-47">
+                                    <div class="row">
+                                        <div class="col-md-4 pb-30">
+                                            <div class="mint_item_card mint_item_card1 text-center">
+                                                <div class="mint_item_card_img">
+                                                    <span><img src="assets/images/nft/mint-item_card_img1.png"
+                                                            alt=""></span>
                                                 </div>
-
-
-
-
-                                                <button class="btn-mid-green w-100 hov_shape_show"
-                                                    data-bs-toggle="modal" data-bs-target="#mintModal">
-                                                    MINT NOW
-                                                    <span class="hov_shape1"><img
-                                                            src="assets/images/icon/hov_shape_L_dark.svg"
-                                                            alt="" /></span>
-                                                    <span class="hov_shape2"><img
-                                                            src="assets/images/icon/hov_shape_L_dark.svg"
-                                                            alt="" /></span>
-                                                    <span class="square_hov_shape"></span>
-                                                </button>
-                                                <p>By clicking “MINT”, You agree to our <a href="#">Terms of Service</a>
-                                                    and our <a href="#">Privacy Policy.</a></p>
+                                                <div class="mint_item_card_text text-center">
+                                                    <h4 class="mb-22 mt-21">Single Mint</h4>
+                                                    <p class="mt-70">Unti Price: 0.08 ETH</p>
+                                                    <p>Total: 0.8 ETH</p>
+                                                    <button class="btn-mid-green w-100 hov_shape_show mt-22">
+                                                        Mint 1x
+                                                        <span class="hov_shape1"><img
+                                                                src="assets/images/icon/hov_shape_L_dark.svg"
+                                                                alt="" /></span>
+                                                        <span class="hov_shape2"><img
+                                                                src="assets/images/icon/hov_shape_L_dark.svg"
+                                                                alt="" /></span>
+                                                        <span class="square_hov_shape"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 pb-30">
+                                            <div class="mint_item_card mint_item_card2 text-center">
+                                                <div class="mint_item_card_tag">
+                                                    <span><img src="assets/images/icon/mint_item_card_tag.svg"
+                                                            alt="icon" /></span>
+                                                </div>
+                                                <div class="mint_item_card_img">
+                                                    <span><img src="assets/images/nft/mint-item_card_img2.png"
+                                                            alt=""></span>
+                                                </div>
+                                                <div class="mint_item_card_text text-center">
+                                                    <h4 class="mb-22 mt-21">3x Mint</h4>
+                                                    <p>VIP channel access</p>
+                                                    <p class="mt-19">Unti Price: 0.07 ETH</p>
+                                                    <p>Total: 0.21 ETH</p>
+                                                    <button class="btn-mid-green w-100 hov_shape_show mt-22">
+                                                        Mint 3x
+                                                        <span class="hov_shape1"><img
+                                                                src="assets/images/icon/hov_shape_L_dark.svg"
+                                                                alt="" /></span>
+                                                        <span class="hov_shape2"><img
+                                                                src="assets/images/icon/hov_shape_L_dark.svg"
+                                                                alt="" /></span>
+                                                        <span class="square_hov_shape"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 pb-30">
+                                            <div class="mint_item_card mint_item_card3 text-center">
+                                                <div class="mint_item_card_tag">
+                                                    <span><img src="assets/images/icon/mint_item_card_tag2.svg"
+                                                            alt="icon" /></span>
+                                                </div>
+                                                <div class="mint_item_card_img">
+                                                    <span><img src="assets/images/nft/mint-item_card_img3.png"
+                                                            alt=""></span>
+                                                </div>
+                                                <div class="mint_item_card_text text-center">
+                                                    <h4 class="mb-22 mt-21">5x Mint</h4>
+                                                    <p>VIP channel access</p>
+                                                    <p class="mt-19">Unti Price: 0.06 ETH</p>
+                                                    <p>Total: 0.30 ETH</p>
+                                                    <button class="btn-mid-green w-100 hov_shape_show mt-22">
+                                                        Mint 5x
+                                                        <span class="hov_shape1"><img
+                                                                src="assets/images/icon/hov_shape_L_dark.svg"
+                                                                alt="" /></span>
+                                                        <span class="hov_shape2"><img
+                                                                src="assets/images/icon/hov_shape_L_dark.svg"
+                                                                alt="" /></span>
+                                                        <span class="square_hov_shape"></span>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- <div class="v5-mint-inner">
+                                <div class="row">
+                                    
+                                    
+                                </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
+
+
+
                 <div class="home_tab_content" id="v5About">
                     <div class="v5-about-content">
                         <div class="container">
@@ -569,6 +713,8 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                         </div>
                     </div>
                 </div>
+
+
                 <div class="home_tab_content" id="v5Roadmap">
                     <div class="v5-roadmap-content">
                         <div class="container">
@@ -577,9 +723,11 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                 <h3>Roadmap</h3>
                             </div>
                         </div>
+
                         <div class="v5-roadmap-header-bg">
 
                         </div>
+
                         <div class="container v5-roadmap-content-container">
                             <div class="v5-roadmap-iner">
                                 <div class="owl-carousel roadmap-slider">
@@ -715,6 +863,10 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                         </div>
                     </div>
                 </div>
+
+
+
+
                 <div class="home_tab_content" id="v5Team">
                     <div class="v5-team-content">
                         <div class="container">
@@ -849,6 +1001,7 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                         </div>
                     </div>
                 </div>
+
                 <div class="home_tab_content" id="v5Faq">
                     <div class="v5-faq-content">
                         <div class="container">
@@ -1024,13 +1177,13 @@ about the threat caused by landmines to the safety, health, and lives of civilia
             <br>
 
             <div class="home5-slide-btns">
-                <button class="home_tab_link home_tab_btn" onclick="openContent(event, 'v5Home')"
-                    id="defaultOpenHome">Home</button>
-                <button class="home_tab_link" onclick="openContent(event, 'v5mint')">Mint</button>
-                <button class="home_tab_link" onclick="openContent(event, 'v5About')">About</button>
-                <button class="home_tab_link" onclick="openContent(event, 'v5Faq')">FAQ</button>
-                <button class="home_tab_link" onclick="openContent(event, 'v5Roadmap')">Roadmap</button>
-                <button class="home_tab_link" onclick="openContent(event, 'v5Team')">Team</button>
+                <div class="home_tab_link home_tab_btn custom-btn-back" onclick="openContent(event, 'v5Home')"
+                    id="defaultOpenHome">Home</div>
+                <div class="home_tab_link custom-btn-back" onclick="openContent(event, 'v5mint')">Mint</div>
+                <div class="home_tab_link custom-btn-back" onclick="openContent(event, 'v5Roadmap')">Roadmap</div>
+                <div class="home_tab_link custom-btn-back" onclick="openContent(event, 'v5Team')">Team</div>
+                <div class="home_tab_link custom-btn-back" onclick="openContent(event, 'v5Faq')">FAQ</div>
+                <div class="home_tab_link custom-btn-back" onclick="openContent(event, 'v5About')">About</div>
             </div>
         </div>
 
@@ -1245,6 +1398,53 @@ about the threat caused by landmines to the safety, health, and lives of civilia
         </div>
     </div>
     <!-- Connect Wallet Modal -->
+
+    <!-- Connect Wallet Modal -->
+    <div class="connect_modal">
+        <div class="modal fade " id="dashboard-Modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog   modal-dialog-centered" style="width: 80vw !important;">
+                <div class="modal-content">
+                    <div class="modal_overlay">
+                        <div class="modal_header">
+                            <h2>Dashboard</h2>
+                            <button data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                        <div class="modal_body text-center">
+                            <p>Connected wallet address: 0x02as6s5d2v626s5d2f162s6df516s5d1v6</p>
+                            <!-- <div class="connect-section">
+                                <ul class="heading-list">
+                                    <li><a href="https://metamask.io/download/" target="_blank"><span><img
+                                                    src="assets/images/icon/MetaMask.svg"
+                                                    alt="Meta-mask-Image"></span>MetaMask</a></li>
+                                </ul>
+                            </div>
+                            <h6>By connecting your wallet, you agree to our <a href="#">Terms of Service</a> and our <a
+                                    href="#">Privacy Policy</a>.</h6> -->
+                        </div>
+                        <div>
+                            <h5>Assets</h5>
+                            <div style="max-width: 45%; padding: 10px; border: white 1px solid; border-radius: 6px;">
+
+                                <img src="assets/images/nft/Frame 13.png" alt="">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="modal_bottom_shape">
+                            <span class="modal_bottom_shape_left"><img src="assets/images/icon/hov_shape_L.svg"
+                                    alt="" /></span>
+                            <span class="modal_bottom_shape_right"><img src="assets/images/icon/hov_shape_L.svg"
+                                    alt="" /></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Connect Wallet Modal -->
+
+
 
     <!-- Bootstrap.min js -->
     <script src="assets/js/popper.min.js"></script>

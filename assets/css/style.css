@@ -4267,6 +4267,12 @@ div.latest-item .hover-shape-bg {
     margin-top: 50px;
 }
 
+.modal .modal-dialog2 {
+    width: 80vw !important;
+    margin: auto;
+    margin-top: 50px;
+}
+
 .modal-content {
     background: #171C21;
     backdrop-filter: blur(5px);
@@ -5328,7 +5334,8 @@ Mint Sect
 }
 
 .mint_menu_section {
-    background: #051117;
+    background: #051117EE;
+    backdrop-filter: blur(6px);
     display: none;
     height: 100vh;
     position: fixed;
@@ -5801,6 +5808,7 @@ Index 5
     position: fixed;
     bottom: 0px;
     z-index: 100;
+    /* text-decoration: underline; */
 }
 
 .bithu-h5-slider .home5-slide-btns button {

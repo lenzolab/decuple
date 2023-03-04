@@ -237,17 +237,17 @@
 Home5 Slider
 -----------*/
 function openContent(evt, cityName) {
-    var i, tabcontent, tablinks;
+    var i, tabcontent, tablinks; console.log('open content called')
     tabcontent = document.getElementsByClassName("home_tab_content");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
     tablinks = document.getElementsByClassName("home_tab_link");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].className = tablinks[i].className.replace(" active-btn", "");
     }
     document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
+    evt.currentTarget.className += " active-btn";
 
 
     // CUSTOM AADED
@@ -267,7 +267,7 @@ $(".home5-slide-btns button").click(function () {
 //Auto Slide home
 
 let slideAuto = 0;
-showAutoSlides();
+//showAutoSlides();
 
 function showAutoSlides() {
     let i;
