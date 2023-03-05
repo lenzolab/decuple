@@ -202,9 +202,12 @@
             $(".mobile-sub-menu-list").hide();
         });
     });
+    var bithu_mobile_menu;
     window.onclick = function (event) {
-        if (event.target == bithu_mobile_menu) {
-            bithu_mobile_menu.style.display = "none";
+        if (bithu_mobile_menu != undefined) {
+            if (event.target == bithu_mobile_menu) {
+                bithu_mobile_menu.style.display = "none";
+            }
         }
     }
 
@@ -237,7 +240,7 @@
 Home5 Slider
 -----------*/
 function openContent(evt, cityName) {
-    var i, tabcontent, tablinks; console.log('open content called')
+    var i, tabcontent, tablinks; //console.log('open content called')
     tabcontent = document.getElementsByClassName("home_tab_content");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
@@ -292,7 +295,7 @@ function showAutoSlides() {
 //Auto Slide mint
 
 let slideMint = 0;
-showMintSlides();
+//showMintSlides();
 
 function showMintSlides() {
     let i;

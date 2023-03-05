@@ -43,6 +43,10 @@
       color: greenyellow;
 }
 
+.gray {
+      color: rgb(101, 105, 95);
+}
+
 .mycar li {
       white-space: nowrap;
       /* width: 500px; */
@@ -79,7 +83,8 @@
 .why-frame {
       cursor: pointer;
       padding: 10px 20px;
-      margin-left: 45px;
+      margin-left: 8px;
+      margin-right: 8px;
       background: rgba(0, 0, 0, 0);
       /* default color */
 

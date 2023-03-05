@@ -58,22 +58,23 @@ about the threat caused by landmines to the safety, health, and lives of civilia
             </div>
             <div class="bithu_mint_header_right d-flex">
 
-                <div class="why-frame" id="Vidbg" title="Video Background">
+                <div class="why-frame d-none d-md-block" id="Vidbg" title="Video Background">
                     <span class="why hov_shape_show  ">
                         Vid BG</span>
 
                 </div>
-                <div class="why-frame" id="nb" title="Next Background">
+                <div class="why-frame d-none d-md-block" id="nb" title="Next Background">
                     <span class="why hov_shape_show  ">
                         N B</span>
 
                 </div>
-                <div class="why-frame" id="vis" title="Object Visibility">
+                <div class="why-frame " id="vis" title="Object Visibility">
                     <span class="why hov_shape_show  ">
                         Vis</span>
 
                 </div>
-                <button class="connect_btn hov_shape_show" data-bs-toggle="modal" data-bs-target="#dashboard-Modal">
+                <button class="connect_btn hov_shape_show d-none d-md-block" data-bs-toggle="modal"
+                    data-bs-target="#dashboard-Modal">
                     <img src="assets/images/icon/connect_wallet.svg" alt="" />
                     Wlt
                     <span class="hov_shape1"><img src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
@@ -112,10 +113,14 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                             isVideo = false
                         }
                     })
+
+                    function PS(inp) {
+                        document.querySelector('video').playbackRate = inp;
+                    }
                 </script>
 
-                <div class="why-frame" data-bs-toggle="modal" data-bs-target="#connectModal">
-                    <span class="why hov_shape_show  ">
+                <div class="why-frame d-none d-md-block" data-bs-toggle="modal" data-bs-target="#connectModal">
+                    <span class="why hov_shape_show ">
                         Why
                         <br class="only-phone .d-block .d-sm-none">
                         <span class="yel">D</span>e<span class="yel">c</span>u<span class="yel">p</span>le ?</span>
@@ -135,11 +140,8 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                     <span class="square_hov_shape"></span>
                 </button>
             </div>
-            <script>
-                document.getElementById('show-dashboard').addEventListener('click', () => {
-                    // Show dashboard model
-                })
-            </script>
+
+
             <div class="mint_menu_section" id="mobile-navbar-menu">
                 <div class="mint_menu_left_bg"></div>
                 <div class="mint_menu_overlay"></div>
@@ -571,15 +573,14 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                 <div class="mint_card_sect mt-47">
                                     <div class="row">
                                         <div class="col-md-4 pb-30">
-                                            <div class="mint_item_card mint_item_card1 text-center">
+                                            <div class="mint_item_card   text-center">
                                                 <div class="mint_item_card_img">
-                                                    <span><img src="assets/images/nft/mint-item_card_img1.png"
-                                                            alt=""></span>
+                                                    <span><img src="assets/images/nft/D1.png" alt=""></span>
                                                 </div>
                                                 <div class="mint_item_card_text text-center">
                                                     <h4 class="mb-22 mt-21">Single Mint</h4>
-                                                    <p class="mt-70">Unti Price: 0.08 ETH</p>
-                                                    <p>Total: 0.8 ETH</p>
+                                                    <p class="mt-19">Unti Price: 1000 USD</p>
+                                                    <p>Total: 1000 USD</p>
                                                     <button class="btn-mid-green w-100 hov_shape_show mt-22">
                                                         Mint 1x
                                                         <span class="hov_shape1"><img
@@ -600,14 +601,13 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                             alt="icon" /></span>
                                                 </div>
                                                 <div class="mint_item_card_img">
-                                                    <span><img src="assets/images/nft/mint-item_card_img2.png"
-                                                            alt=""></span>
+                                                    <span><img src="assets/images/nft/D13.png" alt=""></span>
                                                 </div>
                                                 <div class="mint_item_card_text text-center">
                                                     <h4 class="mb-22 mt-21">3x Mint</h4>
-                                                    <p>VIP channel access</p>
-                                                    <p class="mt-19">Unti Price: 0.07 ETH</p>
-                                                    <p>Total: 0.21 ETH</p>
+                                                    <!-- <p>VIP channel access</p> -->
+                                                    <p class="mt-19">Unti Price: 950 USD</p>
+                                                    <p>Total: <span class="ger">2850</span> USD </p>
                                                     <button class="btn-mid-green w-100 hov_shape_show mt-22">
                                                         Mint 3x
                                                         <span class="hov_shape1"><img
@@ -628,14 +628,13 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                             alt="icon" /></span>
                                                 </div>
                                                 <div class="mint_item_card_img">
-                                                    <span><img src="assets/images/nft/mint-item_card_img3.png"
-                                                            alt=""></span>
+                                                    <span><img src="assets/images/nft/D5.png" alt=""></span>
                                                 </div>
                                                 <div class="mint_item_card_text text-center">
                                                     <h4 class="mb-22 mt-21">5x Mint</h4>
-                                                    <p>VIP channel access</p>
-                                                    <p class="mt-19">Unti Price: 0.06 ETH</p>
-                                                    <p>Total: 0.30 ETH</p>
+                                                    <!-- <p>VIP channel access</p> -->
+                                                    <p class="mt-19">Unti Price: 900 USD</p>
+                                                    <p>Total: <span class="ger">4500</span> USD </p>
                                                     <button class="btn-mid-green w-100 hov_shape_show mt-22">
                                                         Mint 5x
                                                         <span class="hov_shape1"><img
@@ -1401,8 +1400,8 @@ about the threat caused by landmines to the safety, health, and lives of civilia
 
     <!-- Connect Wallet Modal -->
     <div class="connect_modal">
-        <div class="modal fade " id="dashboard-Modal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog   modal-dialog-centered" style="width: 80vw !important;">
+        <div class="modal fade " id="dashboard-Modal" tabindex="-1" aria-hidden="true" style="width: 100% !important;">
+            <div class="modal-dialog   modal-dialog-centered" style="max-width: 80% !important;">
                 <div class="modal-content">
                     <div class="modal_overlay">
                         <div class="modal_header">
@@ -1411,22 +1410,109 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
                         </div>
+                        <style>
+                            .dashboard-card {
+                                padding: 16px;
+                                background-color: #45676255;
+                                text-align: start;
+                            }
+
+                            .dashboard-card p {
+                                text-align: start !important;
+                            }
+
+                            .card-frame {
+                                padding: 12px;
+                            }
+
+                            .dashboard-asset-frame {
+                                max-width: 25%;
+                                padding: 10px;
+                                border: rgb(101, 105, 95) 1px solid;
+                                border-radius: 6px;
+                                cursor: pointer;
+                            }
+
+                            .dashboard-asset-frame img {
+                                border-radius: 3px;
+                            }
+
+                            .dashboard-asset-frame:hover {
+                                border: rgb(222, 231, 209) 1px solid;
+                                background-color: rgb(222, 231, 209, 0.1);
+                            }
+                        </style>
                         <div class="modal_body text-center">
-                            <p>Connected wallet address: 0x02as6s5d2v626s5d2f162s6df516s5d1v6</p>
-                            <!-- <div class="connect-section">
-                                <ul class="heading-list">
-                                    <li><a href="https://metamask.io/download/" target="_blank"><span><img
-                                                    src="assets/images/icon/MetaMask.svg"
-                                                    alt="Meta-mask-Image"></span>MetaMask</a></li>
-                                </ul>
+                            <div class="row ">
+                                <div class="col-md-6 card-frame">
+                                    <div class="dashboard-card">
+                                        <h4>Connected wallet address:</h4>
+                                        <p>0x02as6s5d2v626s5d2f162s6df516s5d1v6</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 card-frame">
+                                    <div class="dashboard-card" style="text-align: center; height: 100%;">
+                                        <div class="row">
+                                            <div class="col-md-4 yel">
+                                                <h4>1</h4>
+                                                <h6>NFTs</h6>
+                                            </div>
+                                            <div class="col-md-4 ger">
+                                                <h4>150</h4>
+                                                <h6>DCP</h6>
+                                            </div>
+                                            <div class="col-md-4 yel">
+                                                <h4>11%</h4>
+                                                <h6>Estimated APY</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
                             </div>
-                            <h6>By connecting your wallet, you agree to our <a href="#">Terms of Service</a> and our <a
-                                    href="#">Privacy Policy</a>.</h6> -->
+                            <div class="row ">
+
+                                <div class="col-md-6 card-frame">
+                                    <div class="dashboard-card ">
+                                        <div class="row">
+                                            <div class="  col-md-6">
+                                                <h5>Referral code:</h5>
+                                                <p>AC97AK47</p>
+                                            </div>
+                                            <div class=" col-md-5">
+                                                <h5>Next bonus:</h5>
+                                                <p>200 <span class="yel"> DCP</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 card-frame">
+                                    <div class="dashboard-card">
+                                        <h5>Staking participattion:</h5>
+                                        <div class="row">
+                                            <div class="col-md-4 ">
+                                                <h6>Faxen</h6>
+                                                <h5 class="gray text-center">Not yet</h5>
+                                            </div>
+                                            <div class="col-md-4 ger">
+                                                <h6>Campify</h6>
+                                                <h5 class="ger text-center">✓ Done</h5>
+                                            </div>
+                                            <div class="col-md-4 ">
+                                                <h6>Barndstaking</h6>
+                                                <h5 class="yel text-center">0</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
                         </div>
                         <div>
                             <h5>Assets</h5>
-                            <div style="max-width: 45%; padding: 10px; border: white 1px solid; border-radius: 6px;">
-
+                            <div class="col-md-3 dashboard-asset-frame">
                                 <img src="assets/images/nft/Frame 13.png" alt="">
                             </div>
                         </div>
@@ -1460,7 +1546,7 @@ about the threat caused by landmines to the safety, health, and lives of civilia
     <!-- wow.min js -->
     <script src="assets/js/wow.min.js"></script>
     <!-- fireflys js -->
-    <script src="assets/js/fireflys.js"></script>
+    <!-- <script src="assets/js/fireflys.js"></script> -->
     <!-- counterup.min js -->
     <script src="assets/js/jquery.counterup.min.js"></script>
     <!-- waypoints.min js -->
@@ -1510,7 +1596,7 @@ about the threat caused by landmines to the safety, health, and lives of civilia
         });
     </script>
 
-    <script src="assets/js/page.js"></script>
+    <!-- <script src="assets/js/page.js"></script> -->
 
     <!-- Gleam whitelist -->
     <!-- <script type="text/javascript" src="https://widget.gleamjs.io/e.js" async="true"></script> -->
