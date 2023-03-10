@@ -161,7 +161,7 @@
       }
 }
 
-.custom-btn-back {
+.custom-btn-backH {
       padding-top: 12px;
       cursor: pointer;
       /* min-width: 100%; */
@@ -203,7 +203,7 @@
 
 #w {
       max-width: 100%;
-      visibility: hidden;
+      /* visibility: hidden; */
 }
 
 #w model-viewer {
@@ -213,6 +213,10 @@
       top: 0;
       left: 0;
       border: none;
+      --progress-bar-color: rgba(236, 193, 100, 0);
+      --progress-bar-height: 10px;
+      /* --progress-bar-border-color: rgb(238, 234, 20);
+      --progress-bar-color: red; */
 }
 
 #w-fr {
@@ -239,4 +243,17 @@
             color: #f0f0f0;
             font-size: 1.1rem;
       }
+}
+
+.jew-icon {
+      width: 24px;
+      rotate: 90deg;
+}
+
+.an-frame {
+      background-image: url(../images/frame-final.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 67%;
+      padding: 0px 10px 20px 10px;
 }

@@ -12,10 +12,49 @@
 (function ($) {
     ("use strict");
     $(window).on('load', function () {
+        // $(".mint_menu_section").toggleClass("active");
+        // setTimeout(() => {
+        //     $(".mint_menu_section").toggleClass("active");
+        //     setTimeout(() => {
+        //         $(".mint_menu_section")[0].style.left = '0';
+        //     }, 100);
+        // }, 2000);
         $(".loader_first").delay(500).fadeOut(300);
         $(".circular-spinner").on('click', function () {
             $(".loader_first").fadeOut(300);
         })
+        setTimeout(() => {
+            $("#w")[0].innerHTML = `
+                                                     
+                                                        <model-viewer
+                                                            src="https://warriorsmaster.github.io/-DOBJTEST/21K-FINAL.glb"
+                                                            alt="Decuple" auto-rotate camera-controls
+                                                            poster="./assets/images/btn/FINAL.png"
+                                                            ios-src="https://warriorsmaster.github.io/-DOBJTEST/21K-FINAL.glb">
+                                                        </model-viewer>
+                                                    
+            `
+
+
+            const modelViewer = document.querySelector('model-viewer');
+            modelViewer.addEventListener('load', function (evt) {
+                console.log('load has been completed');
+                $("#spinner-2")[0].style.display = 'none';
+
+            })
+        }, 1000);
+
+        setTimeout(() => {
+            var allLines = $('.jew-icon');
+            console.info(allLines[2])
+            for (let i = 0; i < allLines.length; i++) {
+                allLines[i].src = 'assets/images/jew2-2.png';
+
+            }
+
+
+        }, 1000);
+
     });
 
     window.onscroll = function () {
@@ -212,6 +251,8 @@
     }
 
     // collections collaps 
+    //if (window.location.pathname == '/index.html' || window.location.pathname == '/') {
+
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
@@ -240,17 +281,18 @@
 Home5 Slider
 -----------*/
 function openContent(evt, cityName) {
-    var i, tabcontent, tablinks; //console.log('open content called')
+    var i, tabcontent, tablinks; console.log('open content called. city: ' + cityName)
+    console.info(evt)
     tabcontent = document.getElementsByClassName("home_tab_content");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
     tablinks = document.getElementsByClassName("home_tab_link");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active-btn", "");
+        tablinks[i].className = tablinks[i].className.replace("active", "");
     }
     document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active-btn";
+    evt.currentTarget.className += " active";
 
 
     // CUSTOM AADED
@@ -261,12 +303,14 @@ function openContent(evt, cityName) {
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpenHome").click();
-//V5Menu btns
-$(".home5-slide-btns button").click(function () {
-    $(".home5-slide-btns").toggleClass("active");
-});
+if (window.location.pathname == '/index.html' || window.location.pathname == '/') {
+    document.getElementById("defaultOpenHome").click();
+    //V5Menu btns
 
+    $(".home5-slide-btns button").click(function () {
+        $(".home5-slide-btns").toggleClass("active");
+    });
+}
 //Auto Slide home
 
 let slideAuto = 0;
@@ -316,25 +360,28 @@ function showMintSlides() {
     setTimeout(showMintSlides, 500);
 };
 
+if (window.location.pathname == '/index.html' || window.location.pathname == '/') {
 
-//index5 page roadmap slider
-$('.owl-carousel.roadmap-slider').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
-    autoplay: true,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
-    responsive: {
-        0: {
-            items: 1
-        },
-        768: {
-            items: 2
-        },
-        992: {
-            items: 3
+    //index5 page roadmap slider
+    $('.owl-carousel.roadmap-slider').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 3
+            }
         }
-    }
-});
+    });
+
+}

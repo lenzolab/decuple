@@ -153,9 +153,17 @@ body .dblock {
 .hov_shape_show .hov_shape2 {
     display: none;
     position: absolute;
-    top: 7px;
+    top: 3px;
     right: 7px;
-    transform: rotate(90deg);
+    /* transform: rotate(90deg); */
+}
+
+.w-100 .hov_shape2 {
+    display: none;
+    position: absolute;
+    top: 7px !important;
+    right: 7px;
+    /* transform: rotate(90deg); */
 }
 
 .footer-sec1 .hov_shape_show .hov_shape2 {
@@ -1604,12 +1612,13 @@ body .modal-backdrop {
 }
 
 .mint_count_list {
-    margin: 30px 0px;
+    margin: 2px 0px;
 }
 
 .mint_count_list ul {}
 
 .mint_count_list ul li {
+    margin-top: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -4640,6 +4649,18 @@ section.loader_first {
     transform: translate(-50%, -50%);
 }
 
+.loader_first-2 .circular-spinner-2 {
+    width: 60px;
+    height: 60px;
+    border: 10px solid rgba(255, 255, 255, 0.1);
+    border-top: 10px solid #00FFA3;
+    border-radius: 50%;
+    animation: pre_rotate 1.5s linear infinite;
+    position: absolute;
+
+    transform: translate(-50%, -50%);
+}
+
 @keyframes pre_rotate {
     from {
         transform: rotate(0);
@@ -5333,9 +5354,9 @@ Mint Sect
     margin-top: 82px;
 }
 
+
 .mint_menu_section {
-    background: #051117EE;
-    backdrop-filter: blur(6px);
+    background: #051117;
     display: none;
     height: 100vh;
     position: fixed;
@@ -5347,7 +5368,7 @@ Mint Sect
 }
 
 .mint_menu_section.active {
-    animation: mint_menu 0.4s;
+    animation: mint_menu 0.6s;
     display: block;
 }
 
@@ -5360,6 +5381,9 @@ Mint Sect
         width: 100%;
     }
 }
+
+
+
 
 .mint_menu_content {
     height: 100%;
@@ -5432,8 +5456,8 @@ Mint Sect
 }
 
 .mint_item_card {
-    background: rgba(36, 44, 52, 0.7);
-    backdrop-filter: blur(10px);
+    /* background: rgba(36, 44, 52, 0.7); */
+    /* backdrop-filter: blur(10px); */
     padding: 30px;
     position: relative;
 }
@@ -5655,7 +5679,8 @@ mint-menu
     width: 100%;
     margin-right: auto;
     padding-left: 64px;
-    padding-top: 142px;
+    /* padding-top: 142px; */
+    padding-top: 64px;
 }
 
 .mint_home_menu {
@@ -5812,8 +5837,8 @@ Index 5
 }
 
 .bithu-h5-slider .home5-slide-btns button {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.00);
+    /* backdrop-filter: blur(2px); */
     width: 16.67%;
     transition: background-color 0.6s ease;
     min-height: 60px;
@@ -5824,18 +5849,74 @@ Index 5
     line-height: 16px;
     text-transform: uppercase;
     color: #ffffff;
-    border-right: 1px solid rgba(255, 255, 255, 0.15);
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    /* border-right: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.15); */
+    background-image: url(../images/btn/3.png);
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* padding-top: 0px; */
+}
+
+.bithu-h5-slider .home5-slide-btns button span {
+    position: relative;
+    top: -24px;
 }
 
 .bithu-h5-slider .home5-slide-btns button:nth-last-child(1) {
     border: none;
 }
 
-.bithu-h5-slider .home5-slide-btns button.active,
+.bithu-h5-slider .home5-slide-btns button.active {
+
+    /* background: rgba(255, 255, 255, 0.30); */
+    /* backdrop-filter: blur(4px); */
+    background-image: url(../images/btn/3-active.png);
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #00FCA1;
+}
+
+.bithu-h5-slider .home5-slide-btns button.active:hover {
+
+    /* background: rgba(255, 255, 255, 0.30); */
+    /* backdrop-filter: blur(4px); */
+    background-image: url(../images/btn/3-active.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
 .bithu-h5-slider .home5-slide-btns button:hover {
-    background: rgba(255, 255, 255, 0.30);
-    backdrop-filter: blur(4px);
+
+    /* background: rgba(113, 245, 163, 0.3); */
+    /* backdrop-filter: blur(4px); */
+    background-image: url(../images/btn/2.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 576px) {
+
+
+    .bithu-h5-slider .home5-slide-btns button.active {
+
+        background: rgba(255, 255, 255, 0.30);
+        backdrop-filter: blur(4px);
+    }
+
+
+
+
+    .bithu-h5-slider .home5-slide-btns button:hover {
+
+        background: rgba(113, 245, 163, 0.3);
+        backdrop-filter: blur(4px);
+
+    }
 }
 
 .bithu-h5-slider .v5-owl-carousel {

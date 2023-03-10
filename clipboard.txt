@@ -1,0 +1,90 @@
+from style.css
+
+.mint_menu_section {
+    background: #051117EE;
+    backdrop-filter: blur(6px);
+    /* display: none; */
+    /* visibility: hidden; */
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0px;
+    width: 0%;
+    /* width: 0%; */
+    z-index: 1000;
+    transition: 0.7s;
+    opacity: 0;
+    /* visibility: hidden; */
+}
+
+.mint_menu_section.active {
+    animation: mint_menu 0.6s;
+    display: block;
+    /* transition: 400ms; */
+    /* visibility: visible; */
+    /* opacity: 1000; */
+}
+
+
+@keyframes mint_menu {
+    0% {
+        width: 0%;
+        /* transform: scaleX(0%); */
+    }
+
+    100% {
+        width: 100%;
+        /* transform: scaleX(100%); */
+    }
+}
+
+
+
+
+
+mint section
+The row on top of the slide:
+<div class="row">
+
+                                    <div class="col-md-4 thin-bottom">
+                                        <h4 class="uppercase">Public Mint Starts in</h4>
+                                    </div>
+                                    <div class="col-md-4 thin-bottom">
+                                        <h4 class="uppercase timer timer-1">
+                                            <span class="days"> <span class=" yel"> 24<span>Days</span></span>
+                                            </span>
+                                            <span class="hours">15<span>H</span></span>
+                                            <span class="minutes">44<span>M</span></span>
+                                            <span class="seconds">18<span>S</span></span>
+                                        </h4>
+                                    </div>
+                                    <!-- <div class="col-md-4 thin-bottom">
+                                        <div class="mint-2_timer mint2_text">
+                                            <div class="buthu_mint1_body_right_timer m-0">
+                                                <div class="timer timer_1">
+                                                    <ul>
+                                                        <li class="days"> <span class=" yel"> 24<span>Days</span></span>
+                                                        </li>
+                                                        <li class="hours">15<span>H</span></li>
+                                                        <li class="minutes">44<span>M</span></li>
+                                                        <li class="seconds">18<span>S</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+
+                                    <!-- <div class="col-md-4">
+                                        <div class="mint2_text mint2_counter">
+                                            <h4 class="mb-10"><span class="count">4331</span> / 9999</h4>
+                                        </div>
+                                    </div> -->
+                                    <div class="col-md-4 thin-bottom">
+                                        <!-- <div class="mint2_text mint2_whitlst"> -->
+                                        <h4 class="mb-10">WHITELIST : SOLDOUT <span><img
+                                                    src="assets/images/icon/mint-right-text-icon.svg" alt="icon"
+                                                    class="jew-icon" /></span></h4>
+                                        <!-- </div> -->
+                                    </div>
+                                </div>

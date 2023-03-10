@@ -52,18 +52,19 @@ about the threat caused by landmines to the safety, health, and lives of civilia
         <div class="bithu_mint_header_inner">
             <div class="bithu_mint_header_left row">
                 <div class="logo row-custom-0">
-                    <a href="index.html"><img src="assets/images/mint-logo.png" alt="logo" /></a>
+                    <a href="index.html"><img src="assets/images/mint-logo.png" alt="logo"
+                            style="max-width: 100%;max-height: 60px;" /></a>
 
                 </div>
             </div>
             <div class="bithu_mint_header_right d-flex">
-
+                <!-- 
                 <div class="why-frame d-none d-md-block" id="Vidbg" title="Video Background">
                     <span class="why hov_shape_show  ">
                         Vid BG</span>
 
-                </div>
-                <div class="why-frame d-none d-md-block" id="nb" title="Next Background">
+                </div> -->
+                <!-- <div class="why-frame d-none d-md-block" id="nb" title="Next Background">
                     <span class="why hov_shape_show  ">
                         N B</span>
 
@@ -72,65 +73,108 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                     <span class="why hov_shape_show  ">
                         Vis</span>
 
-                </div>
-                <button class="connect_btn hov_shape_show d-none d-md-block" data-bs-toggle="modal"
+                </div> -->
+                <!-- <button class="connect_btn hov_shape_show d-none d-md-block" data-bs-toggle="modal"
                     data-bs-target="#dashboard-Modal">
                     <img src="assets/images/icon/connect_wallet.svg" alt="" />
                     Wlt
                     <span class="hov_shape1"><img src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
-                    <span class="hov_shape2"><img src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                    <span class="hov_shape2"><img src="assets/images/icon/hov_shape_s_2.svg" alt="" /></span>
                     <span class="square_hov_shape"></span>
-                </button>
+                </button> -->
 
 
                 <script>
-                    document.getElementById('vis').addEventListener('click', () => {
-                        document.getElementById('w').innerHTML = `<model-viewer src="https://warriorsmaster.github.io/-DOBJTEST/21K-FINAL.glb" alt="VR Headset" auto-rotate
-                    camera-controls ar ios-src="https://warriorsmaster.github.io/-DOBJTEST/21K-FINAL.glb">
-                </model-viewer>`
-                        if (document.getElementById('w').style.visibility == "visible") {
-                            document.getElementById('w').style.visibility = "hidden"
-                        } else {
-                            document.getElementById('w').style.visibility = "visible"
-                        }
-                    })
+                    //     document.getElementById('vis').addEventListener('click', () => {
+                    //         document.getElementById('w').innerHTML = `<model-viewer src="https://warriorsmaster.github.io/-DOBJTEST/21K-FINAL.glb" alt="VR Headset" auto-rotate
+                    //     camera-controls ar ios-src="https://warriorsmaster.github.io/-DOBJTEST/21K-FINAL.glb">
+                    // </model-viewer>`
+                    //         if (document.getElementById('w').style.visibility == "visible") {
+                    //             document.getElementById('w').style.visibility = "hidden"
+                    //         } else {
+                    //             document.getElementById('w').style.visibility = "visible"
+                    //         }
+                    //     })
                     var bgNumX = 2;
-                    document.getElementById('nb').addEventListener('click', () => {
-                        //v5-home-content
-                        document.getElementById('pbg').style.background = "url(../assets/images/bg/Pbg" + bgNumX + ".svg)";
-                        bgNumX++;
-                    })
+                    // document.getElementById('nb').addEventListener('click', () => {
+                    //     //v5-home-content
+                    //     document.getElementById('pbg').style.background = "url(../assets/images/bg/Pbg" + bgNumX + ".svg)";
+                    //     bgNumX++;
+                    // })
                     var isVideo = false;
-                    document.getElementById('Vidbg').addEventListener('click', () => {
-                        if (!isVideo) {
-                            document.getElementById('video-bg').innerHTML = `<video autoplay muted loop id="myVideo">
-                            <source src="assets/images/bg/bgv.mp4" type="video/mp4">
-                        </video>`;
-                            document.querySelector('video').playbackRate = 0.4;
-                            isVideo = true
-                        } else {
-                            document.getElementById('video-bg').innerHTML = ""
-                            isVideo = false
-                        }
-                    })
+                    // uncomment this part to and the button to activte the video button
+                    // document.getElementById('Vidbg').addEventListener('click', () => {
+                    //     if (!isVideo) {
+                    //         document.getElementById('video-bg').innerHTML = `<video autoplay muted loop id="myVideo">
+                    //         <source src="assets/images/bg/bgv.mp4" type="video/mp4">
+                    //     </video>`;
+                    //         document.querySelector('video').playbackRate = 0.4;
+                    //         isVideo = true
+                    //     } else {
+                    //         document.getElementById('video-bg').innerHTML = ""
+                    //         isVideo = false
+                    //     }
+                    // })
 
-                    function PS(inp) {
-                        document.querySelector('video').playbackRate = inp;
+                    // function PS(inp) {
+                    //     document.querySelector('video').playbackRate = inp;
+                    // }
+                    function TryConnect() {
+                        console.log('TryConnect called')
+
+                        // if (window.isEthereum) {
+                        //     console.log('window.isEthereum')
+
+                        if (window.ethereum === undefined) {
+                            sendAlert('You need to install MetaMask Extention.')
+                            console.log('ERROR: You need to install MetaMask Extention.')
+                            //return Promise.resolve(false);
+                        } else {
+                            //hasMetamask = true;
+                            var provider = new ethers.providers.Web3Provider(window.ethereum, "any");
+                            provider.send("eth_requestAccounts", []).then(() => {
+                                var signer = provider.getSigner();
+                                signer.getAddress().then(function (ret2) {
+                                    let walletAddress = ret2
+                                    console.log('Wal addres: ' + walletAddress)
+
+                                })
+                            });
+
+                        }
+                        // }
+                    }
+                    function fdv() {
+                        var a = 500 * 500;
+                        var b = 1000 * 800;
+                        var partners = 1000;
+                        var airdrop = 100;
+                        var total = 8555;
+
+                        var fp = 1000;//starting price in USD
+                        var lefted = total - (2600);
+                        var balance = a + b;
+                        for (let i = 0; i < lefted; i++) {
+                            balance += i + 1000;
+
+                        }
+                        window.alert(balance)
                     }
                 </script>
 
-                <div class="why-frame d-none d-md-block" data-bs-toggle="modal" data-bs-target="#connectModal">
+                <div class="why-frame d-none d-md-block" data-bs-toggle="modal" data-bs-target="#why-Modal">
                     <span class="why hov_shape_show ">
                         Why
                         <br class="only-phone .d-block .d-sm-none">
-                        <span class="yel">D</span>e<span class="yel">c</span>u<span class="yel">p</span>le ?</span>
+                        <span class="yel">D</span>e<span class="yel">c</span>u<span class="yel">p</span>le</span>
                 </div>
 
-                <div class="connect-btn-wrapper d-none d-md-block" style="margin-left: 25px;">
+                <div class="connect-btn-wrapper d-none d-md-block" style="margin-left: 25px;" data-bs-toggle="modal"
+                    data-bs-target="#download-metamask" onclick="TryConnect()">
                     <button class="btn-small-gray hov_shape_show">
                         <img src="assets/images/icon/connect_wallet.svg" alt="" class="btn_icon" />CONNECT
                         <span class="hov_shape1"><img src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
-                        <span class="hov_shape2"><img src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                        <span class="hov_shape2"><img src="assets/images/icon/hov_shape_s_2.svg" alt="" /></span>
                         <span class="square_hov_shape"></span>
                     </button>
                 </div>
@@ -141,7 +185,7 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                 </button>
             </div>
 
-
+            <!-- Menu  -->
             <div class="mint_menu_section" id="mobile-navbar-menu">
                 <div class="mint_menu_left_bg"></div>
                 <div class="mint_menu_overlay"></div>
@@ -151,8 +195,112 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                     </div>
                     <div class="container">
                         <div class="mint_menu_inner">
-                            <div class="mint_menu_left">
+                            <div class="mint_menu_right">
                                 <h2 class="uppercase">Menu</h2>
+
+                                <div class="mint_right_menu_content">
+                                    <div class="mint_right_menu_list mint_right_menu_list1">
+                                        <h5 class="uppercase">Sub pages</h5>
+                                        <div class="mint_right_menu_list1_content">
+                                            <ul>
+                                                <li><a href="blog.html" target="_blank">DECUPLE Blog</a></li>
+                                                <li><a href="gallery.html" target="_blank">Gallery</a></li>
+                                                <li><a href="blog-details.html" target="_blank">Whitepaper</a></li>
+                                            </ul>
+                                            <!-- <ul>
+                                                <li><a href="aboutus.html">About Us</a></li>
+                                                <li><a href="roadmap.html">Roadmap</a></li>
+                                                <li><a href="collections.html">Collections</a></li>
+                                                <li><a href="faq.html">FAQs</a></li>
+                                                <li><a href="contact-us.html">Contact Us</a></li>
+                                            </ul> -->
+                                        </div>
+                                    </div>
+                                    <div class="mint_right_menu_list mint_right_menu_list2">
+                                        <h5 class="uppercase">Join With us</h5>
+                                        <div class="mint_social_links">
+                                            <ul>
+                                                <li class="social_hov_shape_show">
+                                                    <a href="#"><span><img src="assets/images/icon/opensea.svg"
+                                                                alt="" /></span></a>
+                                                    <span class="social_hov_shape1"><img
+                                                            src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                                                </li>
+                                                <li class="social_hov_shape_show">
+                                                    <a href="#"><span><img src="assets/images/icon/dis_logo.svg"
+                                                                alt="" /></span></a>
+                                                    <span class="social_hov_shape1"><img
+                                                            src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                                                </li>
+                                                <li class="social_hov_shape_show">
+                                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                                    <span class="social_hov_shape1"><img
+                                                            src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                                                </li>
+                                                <li class="social_hov_shape_show mint_social_links3">
+                                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                                    <span class="social_hov_shape1"><img
+                                                            src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                                                </li>
+                                                <li class="social_hov_shape_show mint_social_links4">
+                                                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                                                    <span class="social_hov_shape1"><img
+                                                            src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                                                </li>
+                                                <li class="social_hov_shape_show">
+                                                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                                    <span class="social_hov_shape1"><img
+                                                            src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                                                </li>
+                                                <li class="social_hov_shape_show mint_social_links6">
+                                                    <a href="#"><img src="assets/images/icon/med.svg" alt="" /></a>
+                                                    <span class="social_hov_shape1"><img
+                                                            src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                                                </li>
+                                                <li class="social_hov_shape_show mint_social_links6">
+                                                    <a href="#" style="text-align: center;"><img
+                                                            src="assets/images/icon/youtube.svg" alt=""
+                                                            style="width: 60%;" /></a>
+                                                    <span class="social_hov_shape1"><img
+                                                            src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                                                </li>
+                                                <li class="social_hov_shape_show mint_social_links6" title="Tiktok">
+                                                    <a href="#" style="text-align: center;"><img
+                                                            src="assets/images/icon/tiktok.svg" alt=""
+                                                            style="width: 60%;" /></a>
+                                                    <span class="social_hov_shape1"><img
+                                                            src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                                                </li>
+                                                <li class="social_hov_shape_show mint_social_links6" title="BSC Scan">
+                                                    <a href="https://bscscan.com/" style="text-align: center;"
+                                                        target="_blank"><img src="assets/images/icon/bscscan.svg" alt=""
+                                                            style="width: 50%;" /></a>
+                                                    <span class="social_hov_shape1"><img
+                                                            src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <h6 class="uppercase mb-10"><span class="mr-14"><img
+                                                    src="assets/images/icon/mail_icon.svg" alt="icon" /></span>Mail us
+                                        </h6>
+                                        <p>Info: info@decuple.network</p>
+                                        <p>Support: support@decuple.network</p>
+
+                                        <h5 class="uppercae"></h5>
+                                        <div
+                                            style="padding: 10px; text-align: center; font-size: smaller; font-weight: 200;">
+                                            <p>Design and development by
+                                                <a href="https://lenzolab.com">Lenzolab</a>
+                                            </p>
+                                            <p> <span style="font-weight: 100; font-size: 16px;">©</span>Lenzolab -
+                                                2022-2023 - All Rights Reserved
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mint_menu_left">
                                 <div class="mint_home_menu hide-scrollbar">
                                     <h5 class="uppercase">The story of DECUPLE</h5>
                                     <p>The <span class="yel">DECUPLE</span> NFT collection is here to take your finances
@@ -198,70 +346,7 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                     </ul> -->
                                 </div>
                             </div>
-                            <div class="mint_menu_right">
-                                <div class="mint_right_menu_content">
-                                    <div class="mint_right_menu_list mint_right_menu_list1">
-                                        <h5 class="uppercase">Sub pages</h5>
-                                        <div class="mint_right_menu_list1_content">
-                                            <ul>
-                                                <li><a href="blog.html" target="_blank">DECUPLE Blog</a></li>
-                                                <li><a href="gallery.html" target="_blank">Gallery</a></li>
-                                                <li><a href="blog-details.html" target="_blank">Whitepaper</a></li>
-                                            </ul>
-                                            <!-- <ul>
-                                                <li><a href="aboutus.html">About Us</a></li>
-                                                <li><a href="roadmap.html">Roadmap</a></li>
-                                                <li><a href="collections.html">Collections</a></li>
-                                                <li><a href="faq.html">FAQs</a></li>
-                                                <li><a href="contact-us.html">Contact Us</a></li>
-                                            </ul> -->
-                                        </div>
-                                    </div>
-                                    <div class="mint_right_menu_list mint_right_menu_list2">
-                                        <h5 class="uppercase">Join With us</h5>
-                                        <div class="mint_social_links">
-                                            <ul>
-                                                <li class="social_hov_shape_show">
-                                                    <a href="#"><span><img src="assets/images/icon/opensea.svg"
-                                                                alt="" /></span></a>
-                                                    <span class="social_hov_shape1"><img
-                                                            src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
-                                                </li>
-                                                <li class="social_hov_shape_show">
-                                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                                    <span class="social_hov_shape1"><img
-                                                            src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
-                                                </li>
-                                                <li class="social_hov_shape_show mint_social_links3">
-                                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                                    <span class="social_hov_shape1"><img
-                                                            src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
-                                                </li>
-                                                <li class="social_hov_shape_show mint_social_links4">
-                                                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
-                                                    <span class="social_hov_shape1"><img
-                                                            src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
-                                                </li>
-                                                <li class="social_hov_shape_show">
-                                                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                                    <span class="social_hov_shape1"><img
-                                                            src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
-                                                </li>
-                                                <li class="social_hov_shape_show mint_social_links6">
-                                                    <a href="#"><img src="assets/images/icon/med.svg" alt="" /></a>
-                                                    <span class="social_hov_shape1"><img
-                                                            src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h6 class="uppercase mb-10"><span class="mr-14"><img
-                                                    src="assets/images/icon/mail_icon.svg" alt="icon" /></span>Mail us
-                                        </h6>
-                                        <p>Info: info@decuple.network</p>
-                                        <p>Support: support@decuple.network</p>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -298,24 +383,108 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                             }
                         </style>
                         <div class="container v5-home-container">
-                            <!-- <span class="v5-home-thunder-icon"><img src="assets/images/icon/v5-thunder-icon.svg"
-                                    alt="icon" class="img-fluid img-low-opacity" /></span>
-                            <span class="v5-home-star-icon "><img src="assets/images/icon/v5-star-icon.svg" alt="icon"
-                                    class="img-fluid img-low-opacity" /></span>
-                            <span class="v5-home-coin-icon"><img src="assets/images/icon/v5-coin-icon.svg" alt="icon"
-                                    class="img-fluid img-low-opacity" /></span> -->
+
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="v5-home-content-left">
                                         <!--<h2 class="uppercase">Build & sell Your<br>Every pixel <span><img -->
-                                        <h2 class="uppercase">Mint & Takeoff using services. </h2>
+                                        <h2 class="uppercase mint-title">
+                                            <span class="bgln"> Mint & <span class="imp"> Elevate</span></span>
+
+                                            <br>
+                                            <span class="smlr"> your digital assets</span>
+                                            <br>
+                                            <span class="smlr"> to new heights with</span>
+                                            <br>
+
+                                            <span class="bgln"><span class="imp">Decuple</span> NFTs.</span>
+                                        </h2>
                                         <!-- <span><img
                                                     src="assets/images/icon/v5-hart-icon.svg" alt="icon"
                                                     class="img-fluid img-low-opacity" /></span> -->
 
-                                        <h3><span class="count">400</span> / 8555 Minted</h3>
-                                        <div class="v5-home-baner-buttons">
-                                            <button class="v5mint_btn btn-mid-green hov_shape_show mr-30"
+                                        <h3 style="margin-bottom: 5px;"><span class="count">400</span> / 8555 Minted
+                                        </h3>
+                                        <div class="v5-home-baner-buttons row">
+                                            <style>
+                                                .mint-title {
+                                                    line-height: 1.1;
+                                                }
+
+                                                .bgln {
+                                                    line-height: 30px;
+                                                }
+
+                                                .imp {
+                                                    color: #00FCA1;
+                                                }
+
+                                                .smlr {
+                                                    font-size: 28px;
+                                                    line-height: 24px;
+
+                                                }
+
+                                                .mint-btn {
+                                                    height: 80px;
+                                                    width: 50%;
+                                                    /* background-color: #00FCA144; */
+                                                    background-image: url(assets/images/btn/btn2-3.png);
+                                                    background-position: center;
+                                                    background-repeat: no-repeat;
+                                                    background-size: 95%;
+                                                    font-weight: 600;
+                                                    font-size: 1.1rem;
+                                                    color: white;
+                                                    text-align: center;
+                                                    margin: auto;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    display: flex;
+                                                }
+
+                                                .mint-btn:hover {
+                                                    background-image: url(assets/images/btn/btn2-3-hover.png);
+                                                    background-position: center;
+                                                    background-repeat: no-repeat;
+                                                    background-size: 95%;
+                                                    background-size: 100%;
+                                                    font-weight: 700;
+                                                    font-size: 1.15rem;
+                                                    cursor: pointer;
+
+                                                }
+
+                                                .wl-btn {
+                                                    margin-left: 5%;
+                                                    height: 80px;
+                                                    width: 45%;
+                                                    /* background-color: #00FCA144; */
+                                                    background-image: url(assets/images/btn/btn5-3.png);
+                                                    background-position: center;
+                                                    background-repeat: no-repeat;
+                                                    background-size: 95%;
+                                                    font-weight: 500;
+                                                    font-size: 1rem;
+                                                    color: white;
+                                                    text-align: center;
+                                                    margin: auto;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    display: flex;
+                                                }
+
+                                                .wl-btn:hover {
+                                                    background-size: 100%;
+                                                    font-weight: 600;
+                                                    font-size: 1.05rem;
+                                                    cursor: pointer;
+                                                }
+                                            </style>
+                                            <span class="mint-btn" onclick="openContent(event, 'v5mint')">Mint</span>
+                                            <span class="wl-btn">whitelist</span>
+
+                                            <!-- <button class="v5mint_btn btn-mid-green hov_shape_show mr-30"
                                                 data-bs-toggle="modal" data-bs-target="#mintModal">
 
                                                 Mint
@@ -324,7 +493,7 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                 <span class="hov_shape2"><img
                                                         src="assets/images/icon/hov_shape_L_dark.svg" alt="" /></span>
                                                 <span class="square_hov_shape_dark"></span>
-                                            </button>
+                                            </button> -->
 
 
                                             <!-- <button class="v5mint_btn btn-mid-green hov_shape_show mr-30"
@@ -336,174 +505,129 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                         src="assets/images/icon/hov_shape_L_dark.svg" alt="" /></span>
                                                 <span class="square_hov_shape_dark"></span>
                                             </button> -->
-                                            <a class="e-widget no-button" href="https://gleam.io/Y0LuB/dec-wl"
-                                                rel="nofollow" target="_blank">
-                                                <button class="v5widhlist_btn btn-mid-transparent hov_shape_show">
-                                                    Whitelist Now
-                                                    <span class="hov_shape1"><img
-                                                            src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
-                                                    <span class="hov_shape2"><img
-                                                            src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
-                                                    <span class="square_hov_shape"></span>
-                                                </button>
-                                            </a>
-
+                                            <!-- <div style="max-width: 30%;">
+                                                <a class="e-widget no-button" href="https://gleam.io/Y0LuB/dec-wl"
+                                                    rel="nofollow" target="_blank">
+                                                    <button class="v5widhlist_btn btn-mid-transparent hov_shape_show">
+                                                        Whitelist Now
+                                                        <span class="hov_shape1"><img
+                                                                src="assets/images/icon/hov_shape_L.svg"
+                                                                alt="" /></span>
+                                                        <span class="hov_shape2"><img
+                                                                src="assets/images/icon/hov_shape_L.svg"
+                                                                alt="" /></span>
+                                                        <span class="square_hov_shape"></span>
+                                                    </button>
+                                                </a>
+                                            </div> -->
                                         </div>
-                                        <ul>
-                                            <li class="uppercase">Max 5 nfts per mint . Floor price 500 USD + gas</li>
+                                        <ul style="margin-top: 3px;">
+                                            <li class="uppercase"> Floor price 1000 USD + gas</li>
                                             <!-- <li class="uppercase">Mint will be live on <span>14 FEB 04:00 AM GMT</span>
                                             </li> -->
-                                            <li class="uppercase">NFT Presale : <span>03 Apr 04:00 AM GMT</span></li>
+                                            <!-- <li class="uppercase">NFT Presale : <span>03 Apr 04:00 AM GMT</span></li> -->
                                             <li class="uppercase">NFT Public mint : <span>04 Apr 04:00 AM GMT</span>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
+
+                                <!-- The viewer section -->
                                 <div class="col-lg-6">
-                                    <div class="v5-home-content-right">
-                                        <div id="w">
-                                            <!-- <model-viewer src="https://warriorsmaster.github.io/-DOBJTEST/21K-FINAL.glb"
-                                                alt="VR Headset" auto-rotate camera-controls ar
-                                                ios-src="https://warriorsmaster.github.io/-DOBJTEST/21K-FINAL.glb">
-                                            </model-viewer> -->
+                                    <div class="v5-home-content-right" style="height: 100%;">
+                                        <div id="long-spinner" style="width: 500px; height: 400px;">
+                                            <div class="loader_first-2"
+                                                style="vertical-align: middle; height: 100%;  ;">
+
+                                                <div class="loader_first_inner"
+                                                    style="height: 100%; min-height: 200px;">
+                                                    <div class="circular-spinner-2" style="z-index: 9999; "
+                                                        id="spinner-2"></div>
+                                                    <div id="w"> </div>
+
+                                                </div>
+                                            </div>
                                         </div>
-                                        <!-- <div class="v5-home-right-change-img">
-                                            <div class="autoslideshow-container">
-                                                <div class="myautoSlides">
-                                                    <img src="assets/images/nft/emoji-img2.png" alt="Emmoji"
-                                                        class="img-fluid" />
-                                                </div>
-                                                <div class="myautoSlides">
-                                                    <img src="assets/images/nft/emoji-img1.png" alt="Emmoji"
-                                                        class="img-fluid" />
-                                                </div>
-                                                <div class="myautoSlides">
-                                                    <img src="assets/images/nft/emoji-img3.png" alt="Emmoji"
-                                                        class="img-fluid" />
-                                                </div>
-                                            </div>
-                                            <div style="display: none">
-                                                <span class="dot"></span>
-                                                <span class="dot"></span>
-                                                <span class="dot"></span>
-                                            </div>
-                                        </div> -->
+
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Bottom carousel -->
-                    <div class="bithu_v4owl_carousel_sect v5-owl-carousel">
-                        <!-- 
-                        /* Line 330
-                        *   How to change the content of the following carousel:
-                        *
-                        *   1- First, make all the desired changes only in the div
-                        *       With id="ceourcel-part-one". 
-                        *   2- Delete the div with id="ceourcel-part-two".
-                        *   3- Duplicate the div With id="ceourcel-part-one". 
-                        *   4- Change the new div id to id="ceourcel-part-two".
-                        *
-                        *   NOTE: both div must be exactly similar, and only the id should be different.
-                        */
-                         -->
-                        <div class="bithu_v4owl_carousel_content v5owl_carousel_content">
-
-
-                            <ul class="mycar" id="Ceourcel-part-one">
-
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon" /></span>
-                                    By staking Legendary NFTs, you can use faxen.io
-                                    at <span class="yel">0 fees.</span>
-                                </li>
-
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon" /></span>
-                                    Having any Decuple NFT, you will get access to <span class="ger">Lenzo private
-                                        sale.</span>
-                                </li>
-
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon" /></span>
-                                    NFT Staking aims to get to <span class="ger">20% APY</span>
-                                </li>
-
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon" /></span>
-                                    Decuple referalls will pay you with raising plan that can end up in <span
-                                        class="orgo">1000 DCP per referee.</span>
-                                </li>
-                            </ul>
-                            <ul class="mycar" id="Ceourcel-part-two">
-
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon" /></span>
-                                    By staking Legendary NFTs, you can use faxen.io
-                                    at <span class="yel">0 fees.</span>
-                                </li>
-
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon" /></span>
-                                    Having any Decuple NFT, you will get access to <span class="ger">Lenzo private
-                                        sale.</span>
-                                </li>
-
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon" /></span>
-                                    NFT Staking aims to get to <span class="ger">20% APY</span>
-                                </li>
-
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon" /></span>
-                                    Decuple referalls will pay you with raising plan that can end up in <span
-                                        class="orgo">1000 DCP per referee.</span>
-                                </li>
-                            </ul>
-
+                        <!-- Bottom carousel -->
+                        <div class="bithu_v4owl_carousel_sect v5-owl-carousel">
                             <!-- 
-                            <ul class="mycar">
+                            /* Line 330
+                            *   How to change the content of the following carousel:
+                            *
+                            *   1- First, make all the desired changes only in the div
+                            *       With id="ceourcel-part-one". 
+                            *   2- Delete the div with id="ceourcel-part-two".
+                            *   3- Duplicate the div With id="ceourcel-part-one". 
+                            *   4- Change the new div id to id="ceourcel-part-two".
+                            *
+                            *   NOTE: both div must be exactly similar, and only the id should be different.
+                            */
+                            -->
+                            <div class="bithu_v4owl_carousel_content v5owl_carousel_content">
 
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon" /></span>
-                                    Mint starts on <span class="yel"> 14 FEB 04:00 AM GMT</span>
-                                </li>
 
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon" /></span>
-                                    DCP presale starts on <span class="yel">14 MAY 04:00 AM GMT</span>
-                                </li>
+                                <ul class="mycar" id="Ceourcel-part-one">
 
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon" /></span>
-                                    NFT Staking first run starts on <span class="ger">14 FEB 04:00 AM GMT</span>
-                                </li>
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon" /></span>
-                                    Whitelist will end on <span class="orgo">14 FEB 04:00 AM GMT</span>
-                                </li>
-                            </ul> -->
+                                    <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon"
+                                                class="jew-icon" /></span>
+                                        By staking Legendary NFTs, you can use faxen.io
+                                        at <span class="yel">0 fees.</span>
+                                    </li>
 
-                            <!-- <ul>
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg"
-                                            alt="icon" /></span>Presale End</li>
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg"
-                                            alt="icon" /></span>MINT IS LIVE</li>
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg"
-                                            alt="icon" /></span>Presale End</li>
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg"
-                                            alt="icon" /></span>MINT IS LIVE</li>
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg"
-                                            alt="icon" /></span>Presale End</li>
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg"
-                                            alt="icon" /></span>MINT IS LIVE</li>
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg"
-                                            alt="icon" /></span>Presale End</li>
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg"
-                                            alt="icon" /></span>MINT IS LIVE</li>
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg"
-                                            alt="icon" /></span>Presale End</li>
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg"
-                                            alt="icon" /></span>MINT IS LIVE</li>
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg"
-                                            alt="icon" /></span>Presale End</li>
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg"
-                                            alt="icon" /></span>MINT IS LIVE</li>
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg"
-                                            alt="icon" /></span>Presale End</li>
-                                <li><span><img src="assets/images/icon/mint_live_white_icon.svg"
-                                            alt="icon" /></span>MINT IS LIVE</li>
-                            </ul> -->
+                                    <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon"
+                                                class="jew-icon" /></span>
+                                        Having any Decuple NFT, you will get access to <span class="ger">Lenzo private
+                                            sale.</span>
+                                    </li>
+
+                                    <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon"
+                                                class="jew-icon" /></span>
+                                        NFT Staking aims to get to <span class="ger">20% APY</span>
+                                    </li>
+
+                                    <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon"
+                                                class="jew-icon" /></span>
+                                        Decuple referalls will pay you with raising plan that can end up in <span
+                                            class="orgo">1000 DCP per referee.</span>
+                                    </li>
+                                </ul>
+
+                                <ul class="mycar" id="Ceourcel-part-two">
+
+                                    <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon"
+                                                class="jew-icon" /></span>
+                                        By staking Legendary NFTs, you can use faxen.io
+                                        at <span class="yel">0 fees.</span>
+                                    </li>
+
+                                    <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon"
+                                                class="jew-icon" /></span>
+                                        Having any Decuple NFT, you will get access to <span class="ger">Lenzo private
+                                            sale.</span>
+                                    </li>
+
+                                    <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon"
+                                                class="jew-icon" /></span>
+                                        NFT Staking aims to get to <span class="ger">20% APY</span>
+                                    </li>
+
+                                    <li><span><img src="assets/images/icon/mint_live_white_icon.svg" alt="icon"
+                                                class="jew-icon" /></span>
+                                        Decuple referalls will pay you with raising plan that can end up in <span
+                                            class="orgo">1000 DCP per referee.</span>
+                                    </li>
+                                </ul>
+
+
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -515,64 +639,21 @@ about the threat caused by landmines to the safety, health, and lives of civilia
 
 
 
-
+                <!-- V mint section mint slide -->
                 <div class="home_tab_content" id="v5mint">
                     <div class="v5-mint-content">
                         <div class="container hide-scrollbar" style="overflow-x: scroll; ">
                             <div class="buthu_mint_body_content buthu_mint2_body_content" style="padding-top: unset;">
-                                <div class="row">
 
-                                    <div class="col-md-4 thin-bottom">
-                                        <h4 class="uppercase">Public Mint Starts in</h4>
-                                    </div>
-                                    <div class="col-md-4 thin-bottom">
-                                        <h4 class="uppercase timer timer-1">
-                                            <span class="days"> <span class=" yel"> 24<span>Days</span></span>
-                                            </span>
-                                            <span class="hours">15<span>H</span></span>
-                                            <span class="minutes">44<span>M</span></span>
-                                            <span class="seconds">18<span>S</span></span>
-                                        </h4>
-                                    </div>
-                                    <!-- <div class="col-md-4 thin-bottom">
-                                        <div class="mint-2_timer mint2_text">
-                                            <div class="buthu_mint1_body_right_timer m-0">
-                                                <div class="timer timer_1">
-                                                    <ul>
-                                                        <li class="days"> <span class=" yel"> 24<span>Days</span></span>
-                                                        </li>
-                                                        <li class="hours">15<span>H</span></li>
-                                                        <li class="minutes">44<span>M</span></li>
-                                                        <li class="seconds">18<span>S</span></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
-
-
-                                    <!-- <div class="col-md-4">
-                                        <div class="mint2_text mint2_counter">
-                                            <h4 class="mb-10"><span class="count">4331</span> / 9999</h4>
-                                        </div>
-                                    </div> -->
-                                    <div class="col-md-4 thin-bottom">
-                                        <!-- <div class="mint2_text mint2_whitlst"> -->
-                                        <h4 class="mb-10">WHITELIST : SOLDOUT <span><img
-                                                    src="assets/images/icon/mint-right-text-icon.svg"
-                                                    alt="icon" /></span></h4>
-                                        <!-- </div> -->
-                                    </div>
-                                </div>
                                 <style>
                                     .thin-bottom {
                                         margin-bottom: 0px;
                                         padding-bottom: 0px;
                                     }
                                 </style>
-                                <div class="mint_card_sect mt-47">
+                                <div class="mint_card_sect mt-47" style="margin-top: 0px;">
                                     <div class="row">
-                                        <div class="col-md-4 pb-30">
+                                        <div class="col-md-4 pb-30 an-frame">
                                             <div class="mint_item_card   text-center">
                                                 <div class="mint_item_card_img">
                                                     <span><img src="assets/images/nft/D1.png" alt=""></span>
@@ -581,7 +662,11 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                     <h4 class="mb-22 mt-21">Single Mint</h4>
                                                     <p class="mt-19">Unti Price: 1000 USD</p>
                                                     <p>Total: 1000 USD</p>
-                                                    <button class="btn-mid-green w-100 hov_shape_show mt-22">
+                                                    <span class="mint-btn" data-bs-toggle="modal"
+                                                        data-bs-target="#mintModal">Mint 1x</span>
+
+
+                                                    <!-- <button class="btn-mid-green w-100 hov_shape_show mt-22">
                                                         Mint 1x
                                                         <span class="hov_shape1"><img
                                                                 src="assets/images/icon/hov_shape_L_dark.svg"
@@ -590,16 +675,16 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                                 src="assets/images/icon/hov_shape_L_dark.svg"
                                                                 alt="" /></span>
                                                         <span class="square_hov_shape"></span>
-                                                    </button>
+                                                    </button> -->
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 pb-30">
+                                        <div class="col-md-4 pb-30 an-frame">
                                             <div class="mint_item_card mint_item_card2 text-center">
-                                                <div class="mint_item_card_tag">
+                                                <!-- <div class="mint_item_card_tag">
                                                     <span><img src="assets/images/icon/mint_item_card_tag.svg"
                                                             alt="icon" /></span>
-                                                </div>
+                                                </div> -->
                                                 <div class="mint_item_card_img">
                                                     <span><img src="assets/images/nft/D13.png" alt=""></span>
                                                 </div>
@@ -608,7 +693,8 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                     <!-- <p>VIP channel access</p> -->
                                                     <p class="mt-19">Unti Price: 950 USD</p>
                                                     <p>Total: <span class="ger">2850</span> USD </p>
-                                                    <button class="btn-mid-green w-100 hov_shape_show mt-22">
+                                                    <button class="btn-mid-green   hov_shape_show mt-22"
+                                                        style="max-width: 40%;">
                                                         Mint 3x
                                                         <span class="hov_shape1"><img
                                                                 src="assets/images/icon/hov_shape_L_dark.svg"
@@ -621,12 +707,12 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 pb-30">
+                                        <div class="col-md-4 pb-30 an-frame">
                                             <div class="mint_item_card mint_item_card3 text-center">
-                                                <div class="mint_item_card_tag">
+                                                <!-- <div class="mint_item_card_tag">
                                                     <span><img src="assets/images/icon/mint_item_card_tag2.svg"
                                                             alt="icon" /></span>
-                                                </div>
+                                                </div> -->
                                                 <div class="mint_item_card_img">
                                                     <span><img src="assets/images/nft/D5.png" alt=""></span>
                                                 </div>
@@ -670,11 +756,13 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                 <div class="col-lg-6">
                                     <div class="v5-about-left">
                                         <div class="bithu_title_section md-pb-20">
-                                            <h2>The Story <img src="assets/images/icon/title_shapes.svg" alt="" /></h2>
+                                            <h2>The Story <img src="assets/images/icon/title_shapes.svg" alt="" />
+                                            </h2>
                                             <h3>About Us</h3>
                                         </div>
                                         <div class="v5-about-left-text">
-                                            <p>We are in the process of building a blockchain game and now We are on the
+                                            <p>We are in the process of building a blockchain game and now We are on
+                                                the
                                                 verge of publishing a series of digital arts
                                                 in the form of NFT. Each tire of the collection has a set of vast
                                                 inter-project use cases and utilities and grants the
@@ -734,37 +822,42 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                         <h3>Phase <span class="colored">1</span> - 2022 Q2 </h3>
                                         <ul>
                                             <li><span><i class="fa-solid fa-check"></i></span>a. Research</li>
-                                            <li><span><i class="fa-solid fa-check"></i></span>b. Feasibility study</li>
+                                            <li><span><i class="fa-solid fa-check"></i></span>b. Feasibility Study
+                                            </li>
                                             <li><span><i class="fa-solid fa-check"></i></span>c. Planning</li>
-                                            <li><span><i class="fa-solid fa-check"></i></span>d. Market research</li>
+                                            <li><span><i class="fa-solid fa-check"></i></span>d. Market Research
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="v5-roadmap-text">
                                         <h3>Phase <span class="colored">2</span> - 2022 Q3 </h3>
                                         <ul>
-                                            <li><span><i class="fa-solid fa-check"></i></span>a. Document preparation
+                                            <li><span><i class="fa-solid fa-check"></i></span>a. Document
+                                                Preparation
                                             </li>
-                                            <li><span><i class="fa-solid fa-check"></i></span>b. NFT asset design</li>
-                                            <li><span><i class="fa-solid fa-check"></i></span>c. Designing the platform
+                                            <li><span><i class="fa-solid fa-check"></i></span>b. NFT Asset Design
                                             </li>
-                                            <li><span><i class="fa-solid fa-check"></i></span>d. Project planning
-                                                details
+                                            <li><span><i class="fa-solid fa-check"></i></span>c. Platform Design
+                                            </li>
+                                            <li><span><i class="fa-solid fa-check"></i></span>d. Project Plan Details
+
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="v5-roadmap-text">
                                         <h3>Phase <span class="colored">3</span> - 2022 Q4 </h3>
                                         <ul>
-                                            <li><span><i class="fa-solid fa-check"></i></span>a. Whitepaper publish
+                                            <li><span><i class="fa-solid fa-check"></i></span>a. Whitepaper Publish
                                             </li>
-                                            <li><span><i class="fa-solid fa-check"></i></span>b. NFT generate</li>
-                                            <li><span><i class="fa-solid fa-check"></i></span>c. Platform implementation
+                                            <li><span><i class="fa-solid fa-check"></i></span>b. NFT Generation</li>
+                                            <li><span><i class="fa-solid fa-check"></i></span>c. Platform
+                                                Implementation
                                             </li>
-                                            <li><span><i class="fa-solid fa-check"></i></span>d. Smart contract
+                                            <li><span><i class="fa-solid fa-check"></i></span>d. Smart Contract
                                                 Creation
                                             </li>
-                                            <li><span><i class="fa-solid fa-check"></i></span>e. Integration library
-                                                development
+                                            <li><span><i class="fa-solid fa-check"></i></span>e. Integration Library
+                                                Development
                                             </li>
 
                                         </ul>
@@ -772,16 +865,19 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                     <div class="v5-roadmap-text">
                                         <h3>Phase <span class="colored">4</span> - 2023 Q1</h3>
                                         <ul>
-                                            <li><span><i class="fa-solid fa-check"></i></span>d. Smart contract
-                                                deployment
+                                            <li><span><i class="fa-solid fa-check"></i></span>d. Smart Contract
+                                                Deployment
                                             </li>
-                                            <li><span><i class="fa-solid fa-minus"></i></span> a. Social media and
-                                                community </li>
-                                            <li><span><i class="fa-solid fa-minus"></i></span> b. NFT whitelist </li>
-                                            <li><span><i class="fa-solid fa-minus"></i></span> c. Platform launch </li>
-                                            <li><span><i class="fa-solid fa-minus"></i></span> d. NFT release </li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> a. Social Media and
+                                                Community </li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> b. NFT Whitelist
+                                            </li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> c. Platform Launch
+                                            </li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> d. NFT Release </li>
                                             <li><span><i class="fa-solid fa-minus"></i></span> e. NFT Listing </li>
-                                            <li><span><i class="fa-solid fa-minus"></i></span> f. Token giveaway </li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> f. Token Giveaway
+                                            </li>
 
                                         </ul>
                                     </div>
@@ -790,13 +886,16 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                         <ul>
 
 
-                                            <li><span><i class="fa-solid fa-minus"></i></span> a. Token listing </li>
-                                            <li><span><i class="fa-solid fa-minus"></i></span> b. Brandstaking start
+                                            <li><span><i class="fa-solid fa-minus"></i></span> a. Token Listing
+                                            </li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> b. Brandstaking Start
                                             </li>
                                             <li><span><i class="fa-solid fa-minus"></i></span> c. Intercorporate
-                                                sponsorship </li>
-                                            <li><span><i class="fa-solid fa-minus"></i></span> d. Game development
-                                                plan publish </li>
+                                                Sponsorship </li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> d. Game Development
+                                                Plan Publish </li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> e. NFT Marketplace Launch
+                                            </li>
 
 
 
@@ -805,13 +904,16 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                     <div class="v5-roadmap-text">
                                         <h3>Phase <span class="colored">6</span> - 2023 Q3</h3>
                                         <ul>
-                                            <li><span><i class="fa-solid fa-minus"></i></span> a. Game development
-                                                team formation </li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> a. Game Development
+                                                Team Formation </li>
 
-                                            <li><span><i class="fa-solid fa-minus"></i></span> b. Game development
-                                                bootstrap</li>
-                                            <li><span><i class="fa-solid fa-minus"></i></span> c. Game character
-                                                development
+                                            <li><span><i class="fa-solid fa-minus"></i></span> b. Game Development
+                                                Bootstrap</li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> c. Game Character
+                                                Development
+                                            </li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> d. Faxen Integration
+                                                Launch
                                             </li>
                                             <!-- <li><span><i class="fa-solid fa-minus"></i></span> c. Game Beta version
                                             </li>
@@ -825,28 +927,30 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                         <h3>Phase <span class="colored">7</span> - 2023 Q4</h3>
                                         <ul>
 
-                                            <li><span><i class="fa-solid fa-minus"></i></span> a. Game mission
-                                                development </li>
-                                            <li><span><i class="fa-solid fa-minus"></i></span> b. Metaverse space
-                                                development </li>
-                                            <li><span><i class="fa-solid fa-minus"></i></span> c. Game mission
-                                                adaptation </li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> a. Game Mission
+                                                Development </li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> b. Metaverse Space
+                                                Development </li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> c. Game Mission
+                                                Adaptation </li>
 
                                         </ul>
                                     </div>
                                     <div class="v5-roadmap-text">
                                         <h3>Phase <span class="colored">8</span> - 2024 Q1</h3>
                                         <ul>
-                                            <li><span><i class="fa-solid fa-minus"></i></span> a. Importing NFTs into
-                                                metaverse </li>
-                                            <li><span><i class="fa-solid fa-minus"></i></span> b. Game objects presale
+                                            <li><span><i class="fa-solid fa-minus"></i></span> a. Importing NFTs
+                                                Into Metaverse </li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> b. Game Objects
+                                                Presale
                                             </li>
 
                                             <li><span><i class="fa-solid fa-minus"></i></span> c. Game Alpha version
                                             </li>
-                                            <li><span><i class="fa-solid fa-minus"></i></span> d. Inter-Metaverse Bridge
-                                                compatibility </li>
-                                            <li><span><i class="fa-solid fa-minus"></i></span> e. Championship run </li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> d. Inter-Metaverse
+                                                Bridge compatibility </li>
+                                            <li><span><i class="fa-solid fa-minus"></i></span> e. Championship Run
+                                            </li>
 
                                         </ul>
                                     </div>
@@ -1025,7 +1129,8 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                     </h2>
                                                     <div class="accordion-panel">
                                                         <p>Decuple is an NFT project introducing brandstaking.
-                                                            In the decuple platform, you can mint, trade and stake NFTs
+                                                            In the decuple platform, you can mint, trade and stake
+                                                            NFTs
                                                             and earn rewards by participating in brandstaking.
                                                             <br>
                                                             Read more about <a
@@ -1081,6 +1186,8 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                         </p>
                                                     </div>
 
+                                                    <!-- Add info about Lenzolab after completing lenzolab whitepaper. -->
+
                                                     <h2 class="accordion">
                                                         Why we should choose Decuple ?
                                                         <span>
@@ -1092,10 +1199,12 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                     </h2>
                                                     <div class="accordion-panel">
                                                         <p>
-                                                            There is a wide variety of options. All can benefit you in
+                                                            There is a wide variety of options. All can benefit you
+                                                            in
                                                             different ways.
                                                             Since the decuple is a utility base collection, owning
-                                                            tokens, you will gain access to programs that can end up in
+                                                            tokens, you will gain access to programs that can end up
+                                                            in
                                                             monetary rewards.
                                                             <!-- Decuple is a multi-industry business that -->
                                                         </p>
@@ -1118,9 +1227,11 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                         </span>
                                                     </h2>
                                                     <div class="accordion-panel">
-                                                        <p>Secure investment plans coming along with the Decuple. As an
+                                                        <p>Secure investment plans coming along with the Decuple. As
+                                                            an
                                                             individual or a corporation, you can use Decuple and
-                                                            platform features to profit and empower your portfolio or
+                                                            platform features to profit and empower your portfolio
+                                                            or
                                                             business.</p>
                                                     </div>
 
@@ -1134,10 +1245,13 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                         </span>
                                                     </h2>
                                                     <div class="accordion-panel">
-                                                        <p>Technically speaking, security is the priority of lenzolab.
+                                                        <p>Technically speaking, security is the priority of
+                                                            lenzolab.
                                                             As blockchain technology has advanced secure levels for
-                                                            keeping track of asset ownership, It is the right choice.
-                                                            Using the BEP-721 on the "Binance Smart Chain", we guarantee
+                                                            keeping track of asset ownership, It is the right
+                                                            choice.
+                                                            Using the BEP-721 on the "Binance Smart Chain", we
+                                                            guarantee
                                                             the ownership of users' assets.
                                                             <br>
                                                             Financially speaking, The great architecture behind the
@@ -1174,23 +1288,23 @@ about the threat caused by landmines to the safety, health, and lives of civilia
 
             </div>
             <br>
-
+            <!-- Home slide button  -->
             <div class="home5-slide-btns">
-                <div class="home_tab_link home_tab_btn custom-btn-back" onclick="openContent(event, 'v5Home')"
-                    id="defaultOpenHome">Home</div>
-                <div class="home_tab_link custom-btn-back" onclick="openContent(event, 'v5mint')">Mint</div>
-                <div class="home_tab_link custom-btn-back" onclick="openContent(event, 'v5Roadmap')">Roadmap</div>
-                <div class="home_tab_link custom-btn-back" onclick="openContent(event, 'v5Team')">Team</div>
-                <div class="home_tab_link custom-btn-back" onclick="openContent(event, 'v5Faq')">FAQ</div>
-                <div class="home_tab_link custom-btn-back" onclick="openContent(event, 'v5About')">About</div>
+                <button class="home_tab_link home_tab_btn " onclick="openContent(event, 'v5Home')"
+                    id="defaultOpenHome"><span>Home</span></button>
+                <button class="home_tab_link" onclick="openContent(event, 'v5mint')"> <span> Mint </span></button>
+                <button class="home_tab_link" onclick="openContent(event, 'v5Roadmap')"><span>Roadmap</span></button>
+                <button class="home_tab_link" onclick="openContent(event, 'v5Team')"><span>Team</span></button>
+                <button class="home_tab_link" onclick="openContent(event, 'v5Faq')"><span>FAQ</span></button>
+                <button class="home_tab_link" onclick="openContent(event, 'v5About')"><span>About</span></button>
             </div>
         </div>
 
     </div>
 
-    <!-- Connect Wallet Modal -->
+    <!-- Why Decuple Modal -->
     <div class="connect_modal">
-        <div class="modal fade " id="connectModal" tabindex="-1" aria-hidden="true">
+        <div class="modal fade " id="why-Modal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal_overlay">
@@ -1222,7 +1336,8 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                     alt="faxen-Image"></span>
                                             <span style="width: unset !important;">
                                                 <span class="why-title"> Campify Turism</span>
-                                                <span class="why-desc">Staking, Free Timeshare, exclusive flights and
+                                                <span class="why-desc">Staking, Free Timeshare, exclusive flights
+                                                    and
                                                     ...</span>
                                             </span>
                                         </a>
@@ -1233,7 +1348,8 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                     alt="faxen-Image"></span>
                                             <span style="width: unset !important;">
                                                 <span class="why-title"> Lenzo metaverse</span>
-                                                <span class="why-desc">IGO private access, Free Allocation, Store front
+                                                <span class="why-desc">IGO private access, Free Allocation, Store
+                                                    front
                                                     and ...</span>
                                             </span>
                                         </a>
@@ -1263,7 +1379,7 @@ about the threat caused by landmines to the safety, health, and lives of civilia
             </div>
         </div>
     </div>
-    <!-- Connect Wallet Modal -->
+    <!-- Why Decuple Modal -->
 
     <!-- Mint Modal -->
     <div class="mint_modal">
@@ -1279,34 +1395,15 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                         </div>
                         <div class="modal_body text-center">
                             <div class="mint_img">
-                                <img src="assets/images/icon/mint-img.png" alt="img-99" style="max-width: 180px;" />
+                                <img src="assets/images/nft/D1.png" alt="img-99" style="max-width: 180px;" />
                             </div>
                             <div class="mint_count_list">
                                 <ul>
-                                    <li style="height: 56px;">
-                                        <span class="tier-option tier-active" id="tier-picker-common-m">
-                                            <img src="assets/images/nft/alltierlabel/common.png" alt=""
-                                                id="common-img-m">
-                                        </span>
-                                        <span class="tier-option" id="tier-picker-rare-m">
-                                            <img src="assets/images/nft/alltierlabel/rare-dis.svg" alt=""
-                                                id="rare-img-m">
-                                        </span>
-                                    </li>
-                                    <li style="height: 56px;">
 
-                                        <span class="tier-option" id="tier-picker-epic-m">
-                                            <img src="assets/images/nft/alltierlabel/epic-dis.svg" alt=""
-                                                id="epic-img-m">
-                                        </span>
-                                        <span class="tier-option" id="tier-picker-leg-m">
-                                            <img src="assets/images/nft/alltierlabel/leg-dis.svg" alt="" id="leg-img-m">
-                                        </span>
-                                    </li>
 
                                     <li>
-                                        <h5>Price</h5>
-                                        <h5> <span id="mint-price-0-m">500</span> USD</h5>
+                                        <h5>Total Price</h5>
+                                        <h5> <span id="mint-price-0-m">1000</span> USD</h5>
                                     </li>
                                     <li>
                                         <h5>Referral code</h5>
@@ -1327,7 +1424,29 @@ about the threat caused by landmines to the safety, health, and lives of civilia
 
                                         </h5>
                                     </li>
-                                    <li>
+                                    <li style="padding: 24px;">
+                                        <p style="margin: 5px; font-size: 0.75rem;">
+                                            Allocation of items is completly random and will not be same as the showan
+                                            image.
+                                            <a href="" target="_blank">
+                                                <img src="assets/images/icon/info2.svg" alt="" id="the-info-m">
+                                            </a>
+                                        </p>
+                                    </li>
+
+
+                                    <div style="justify-content: start;  ">
+                                        <p style="margin: 5px; font-size: 0.85rem; text-align: start;">Choose a BEP-20
+                                            for payment:</p>
+                                        <div style="justify-content: space-around; display: flex; ">
+                                            <span><input type="radio" name="PaymentC" title="BUSD" id="" checked="true">
+                                                BUSD</span>
+                                            <span><input type="radio" name="PaymentC" title="USDC" id=""> USDC</span>
+                                            <span><input type="radio" name="PaymentC" title="USDT" id=""> USDT</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- <li>
                                         <h5>Quantity</h5>
                                         <div class="mint_quantity_sect">
                                             <button onclick="buttonClick_Dec();">-</button>
@@ -1335,18 +1454,30 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                             <button onclick="buttonClick_Inc();">+</button>
                                         </div>
                                         <h5><span id="total-price-m">500</span> USD</h5>
-                                    </li>
+                                    </li> -->
 
                                 </ul>
                             </div>
                             <button class="modal_mint_btn hov_shape_show">
-                                MINT NOW
+                                Approve payment
                                 <span class="hov_shape1"><img src="assets/images/icon/hov_shape_L_dark.svg"
                                         alt="" /></span>
                                 <span class="hov_shape2"><img src="assets/images/icon/hov_shape_L_dark.svg"
                                         alt="" /></span>
                             </button>
-                            <h6>Presale & Whitelist : Soldout</h6>
+                            <div class="mint_count_list">
+
+                                <ul>
+                                    <li style="justify-content: unset;"><input type="checkbox" name="" id="">&nbsp; I
+                                        agree
+                                        with &nbsp;<a href="">terms and
+                                            conditions</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <h6>For more info about the mint process please visit <a href=""
+                                    style="color: #0d6efd;">Mint instruction</a></h6>
                         </div>
                         <div class="modal_bottom_shape">
                             <span class="modal_bottom_shape_left"><img src="assets/images/icon/hov_shape_L.svg"
@@ -1382,8 +1513,9 @@ about the threat caused by landmines to the safety, health, and lives of civilia
                                                     alt="Meta-mask-Image"></span>MetaMask</a></li>
                                 </ul>
                             </div>
-                            <h6>By connecting your wallet, you agree to our <a href="#">Terms of Service</a> and our <a
-                                    href="#">Privacy Policy</a>.</h6>
+                            <h6>By connecting your wallet, you agree to our <a href="#">Terms of Service</a> and our
+                                <a href="#">Privacy Policy</a>.
+                            </h6>
                         </div>
                         <div class="modal_bottom_shape">
                             <span class="modal_bottom_shape_left"><img src="assets/images/icon/hov_shape_L.svg"
@@ -1398,7 +1530,7 @@ about the threat caused by landmines to the safety, health, and lives of civilia
     </div>
     <!-- Connect Wallet Modal -->
 
-    <!-- Connect Wallet Modal -->
+    <!-- Dashboard Modal -->
     <div class="connect_modal">
         <div class="modal fade " id="dashboard-Modal" tabindex="-1" aria-hidden="true" style="width: 100% !important;">
             <div class="modal-dialog   modal-dialog-centered" style="max-width: 80% !important;">
@@ -1528,7 +1660,7 @@ about the threat caused by landmines to the safety, health, and lives of civilia
             </div>
         </div>
     </div>
-    <!-- Connect Wallet Modal -->
+    <!-- Dashboard Modal -->
 
 
 
@@ -1567,6 +1699,9 @@ about the threat caused by landmines to the safety, health, and lives of civilia
     <script src="assets/js/metamask.js"></script>
     <!-- main js -->
     <script src="assets/js/main.js"></script>
+
+    <!-- ethers js -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
     <script>
         var i = 1;
 
