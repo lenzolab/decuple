@@ -1672,11 +1672,14 @@
     .bithu-h5-slider .home5-slide-btns button.active {
         display: block;
         border-top: 1px solid rgba(255, 255, 255, 0.15);
-        display: block;
+        padding-top: 24px;
+        text-align: center;
     }
 
     .bithu-h5-slider .home5-slide-btns.active button {
         display: block;
+        background-image: none !important;
+        padding-top: 36px;
     }
 
     .bithu-h5-slider .home5-slide-btns:after {

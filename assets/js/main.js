@@ -23,6 +23,33 @@
         $(".circular-spinner").on('click', function () {
             $(".loader_first").fadeOut(300);
         })
+
+        if (window.innerWidth > 992) {
+
+            // Commented for development time. must be uncomment for production time.
+            //loadViewer()
+        } else {
+            document.getElementById('viewer-section').style.display = 'none'
+        }
+
+        if (window.innerHeight < 580) {
+            document.getElementById('title-footer-text').style.display = 'none'
+
+        }
+        setTimeout(() => {
+            var allLines = $('.jew-icon');
+            console.info(allLines[2])
+            for (let i = 0; i < allLines.length; i++) {
+                allLines[i].src = 'assets/images/jew2-2.png';
+
+            }
+
+
+        }, 1000);
+
+    });
+
+    function loadViewer() {
         setTimeout(() => {
             $("#w")[0].innerHTML = `
                                                      
@@ -43,20 +70,7 @@
 
             })
         }, 1000);
-
-        setTimeout(() => {
-            var allLines = $('.jew-icon');
-            console.info(allLines[2])
-            for (let i = 0; i < allLines.length; i++) {
-                allLines[i].src = 'assets/images/jew2-2.png';
-
-            }
-
-
-        }, 1000);
-
-    });
-
+    }
     window.onscroll = function () {
         myFunction()
     };

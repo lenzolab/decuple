@@ -597,13 +597,15 @@
     <div class="main-footer-content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="footer_image">
-                        <div class="logo row-custom-0 row">
-                            <div class="col-md-2">
-                                <a href="index.html"><img src="assets/images/mint-logo.png" alt="logo" /></a>
-                            </div>
-                            <div class="col">
+                <hr>
+                <div class="col-lg-4 d-none d-md-block">
+                    <div class="footer_image col-sm-12">
+                        <div class="logo row-custom-0 row col-sm-12">
+                            <!-- <div class="col-md-2 col-2 col-sm-2 col-xs-2"> -->
+                            <a href="index.html" class="col-sm-2"><img src="assets/images/mint-logo.png" alt="logo"
+                                    class="footer-logo" /></a>
+                            <!-- </div> -->
+                            <div class=" col-sm-10 ">
                                 <h1>DECUPLE</h1>
                             </div>
                         </div>
@@ -611,11 +613,40 @@
                             whole new level.</p>
                     </div>
                 </div>
+
+
+                <div class="col-sm-12 d-block d-md-none">
+                    <style>
+                        .cl25 {
+                            width: 25%;
+                        }
+
+                        .cl75 {
+                            width: 75%;
+                        }
+                    </style>
+                    <div class=" row">
+                        <div class="cl25"><a href="index.html" class="col-sm-2"><img src="assets/images/mint-logo.png"
+                                    alt="logo" /></a>
+                        </div>
+
+
+                        <div class="cl75">
+
+                            <h1>DECUPLE</h1>
+                            <p>The <span class="yel"> DECUPLE </span>NFT collection is here to take your finances into a
+                                whole new level.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
                 <div class="col-lg-2">
                     <div class="footer-menu">
-                        <h5 class="menu-title">Site map</h5>
+                        <h5 class="menu-title">Site Pages</h5>
                         <ul class="menu-list">
                             <li><a href="index.html">Home</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
                             <li><a href="blog.html">Blog</a></li>
                             <li><a href="https://decuple.gitbook.io/" target="_blank">
                                     whitepaper</a></li>
@@ -633,6 +664,8 @@
                             </ul>
                         </div>
                     </div> -->
+                <br>
+                <hr>
                 <div class="col-lg-4">
                     <div class="footer_newsletter">
                         <h5 class="menu-title">Subscribe Newsletter</h5>
@@ -665,6 +698,21 @@
                             <style>
                                 .on li {
                                     max-width: 12.5%;
+                                }
+
+                                @media only screen and (max-width: 991px) {
+                                    .on li {
+                                        padding: 0px !important;
+
+                                    }
+
+                                    .on li a img {
+                                        max-width: 20px;
+                                    }
+
+                                    .footer-logo {
+                                        max-width: 25%;
+                                    }
                                 }
                             </style>
                             <ul class="on">

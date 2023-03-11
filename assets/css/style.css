@@ -5855,6 +5855,7 @@ Index 5
     background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
+    opacity: 0.8;
     /* padding-top: 0px; */
 }
 
@@ -5915,6 +5916,7 @@ Index 5
 
         background: rgba(113, 245, 163, 0.3);
         backdrop-filter: blur(4px);
+        background-image: none !important;
 
     }
 }
