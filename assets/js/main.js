@@ -27,7 +27,7 @@
         if (window.innerWidth > 992) {
 
             // Commented for development time. must be uncomment for production time.
-            //loadViewer()
+            loadViewer()
         } else {
             document.getElementById('viewer-section').style.display = 'none'
         }
